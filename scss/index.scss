@@ -1,0 +1,49 @@
+@import './variable.scss';
+@import './reset.scss';
+@import './mobile.scss';
+@import './pc.scss';
+
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+}
+/* 自定义字体*/
+// @font-face {
+//   font-family: 'Glyphicons Halflings';
+//   src: url('');
+// }
+*{
+  font-family: 'HiraginoSansGB-W3','Arial';
+}
+/* 字体自适应*/
+$min-font-size: 1.4rem;
+$max-font-size: 1.6rem;
+$min-screen: 768px;
+$max-screen: 1200px;
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-size: $min-font-size;
+}
+
+@media (min-width: $min-screen) and (max-width: $max-screen) {
+  body {
+    font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
+  }
+}
+@media (min-width: $max-screen) {
+  body {
+    font-size: $max-font-size;
+  }
+}

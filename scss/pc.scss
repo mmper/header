@@ -1,0 +1,314 @@
+@import './variable.scss';
+
+
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@mixin transform($in) {
+  transform: $in;
+  -webkit-transform: $in;
+  -moz-transform: $in;
+  -o-transform: $in;
+  -ms-transform: $in;
+}
+@media screen and (min-width: 768px) {
+  body{
+    color: $primary-font-color;
+    a{
+      color: $primary-font-color;
+      &:hover{
+        color:$active-font-color;
+      }
+    }
+    .iconfont{
+      font-size: 100%;
+    }
+  }
+  &.mobile {
+    display: none;
+  }
+  .hearder {
+    background-color: $primary-header-bg;
+    box-shadow: 0px .3125rem .625rem $primary-shadow;
+    &.resize{
+      box-shadow: none;
+    }
+    &__container{
+      max-width: 1170px;
+      min-width: 900px;
+      width: 90%;
+      margin: 0 auto;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &.resize{
+        box-shadow: 0px .3125rem .625rem $primary-shadow;
+      }
+      .logo {
+        max-width: 12.5rem;
+        height: 2.5rem;
+        img{
+          height: 100%;
+        }
+      }
+      .menu {
+        flex:1;
+        height: 100%;
+        max-width: 70%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content:flex-end;
+        &-item {
+          padding: 0 .5rem;
+          position: relative;
+          min-width: 12.5%;
+          &.hide{
+            display: none;
+          }
+          &:hover{
+            .submenu{
+              display: block;
+            }
+          }
+          >a {
+            display: inline-block;
+            line-height: 4rem;
+            width: 100%;
+            text-align: center;
+            @include ellipsis;
+            color: $primary-font-color;
+            &:hover{
+              color: $active-font-color;
+            }
+          }
+          &.active {
+            >a {
+              color: $active-font-color;
+            }
+          }
+          .submenu {
+            display:none;
+            position: absolute;
+            top: 3.375rem;
+            left:0;
+            width: 9.75rem;
+            background: #fff;
+            border-radius:0 0 .25rem .25rem;
+            box-shadow:0 1.25rem 2.5rem .625rem $primary-shadow;
+            border-top: 1px solid $active-font-color;
+            .e_li{
+              position: relative;
+              &:hover{
+                .thr{
+                  display: block;
+                }
+              }
+              >a {
+                line-height: 3.125rem;
+                height: 3.125rem;
+                padding-left: 1.25rem;
+                width: 100%;
+                display: block;
+                @include ellipsis;
+              }
+              .thr{
+                display: none;
+                position: absolute;
+                top: -0.0625rem;
+                right: -9.75rem;
+                width: 9.75rem;
+                background: #fff;
+                border-radius:0 0 .25rem .25rem;
+                box-shadow:0 1.25rem 2.5rem .625rem $primary-shadow;
+                border-top: 1px solid $active-font-color;
+                a{
+                  line-height: 3.125rem;
+                  height: 3.125rem;
+                  padding-left: 1.25rem;
+                  width: 100%;
+                  display: block;
+                  @include ellipsis;
+                }
+              }
+            }
+          }
+        }
+        .page-down {
+          display: none;
+        }
+        .page-up{
+          display: none;
+          @include transform(rotate(-180deg));
+        }
+      }
+      .icons {
+        display: flex;
+        height: 100%;
+        .box{
+          display: flex;
+          align-items: center;
+        }
+        .icon {
+          width: 1.625rem;
+          height: 1.625rem;
+          border: .0625rem  solid $primary-font-color;
+          border-radius: 50vw;
+          margin-left: 1.125rem;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          a{
+            color: $primary-font-color;
+            font-size: .75rem;
+          }
+          &:hover{
+            border-color: $active-font-color;
+            color: $active-font-color;
+            >a{
+              color: $active-font-color;
+            }
+          }
+        }
+        .search{
+          position: relative;
+          .search_input {
+            position: absolute;
+            top: calc(2.35rem/2);
+            bottom: 0;
+            right: 0;
+            line-height: 1.65rem;
+            height: 1.65rem;
+            margin-left: 0;
+            background-color: $primary-header-bg;
+            width: 8.75rem;
+            display: flex;
+            align-items: center;
+            border: .0625rem  solid $primary-font-color;
+            border-radius: 50vh;
+            padding-left: .5rem;
+            display: none;
+            .input{
+              background:transparent;
+              outline: none;
+              border: none;
+              line-height: 1.65rem;
+              padding: 0 1.5rem 0 .375rem;
+              width: 6.5rem;
+            }
+            .search-btn{
+              position: absolute;
+              top: 0;
+              right: 0;
+              cursor: pointer;
+              width: 1.625rem;
+              line-height: 1.625rem;
+              border: 0;
+              display:block;
+              background:transparent;
+              &:focus{
+                border: 0;
+                outline: none;
+                background:transparent;
+              }
+              &:hover{
+                i {
+                  color: $active-font-color;
+                }
+              }
+            } 
+          }
+        }
+        .lang{
+          position: relative;
+          &:hover{
+            .lang__downlist{
+              display: block;
+            }
+          }
+          .lang__downlist{
+            display: none;
+            position: absolute;
+            top: 3.375rem;
+            left: 0;
+            width: 3.9375rem;
+            padding: .625rem 0;
+            background:$primary-header-bg;
+            box-shadow: .0625rem .0625rem .9375rem 0 $primary-shadow;
+            border-radius: .25rem;
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            overflow-y: scroll;
+            &-item{
+              line-height: 2.25rem;
+              text-align: center;
+              font-size: .75rem;
+              &:hover{
+                .lang-link{
+                  color: $active-font-color;
+                }
+              }
+              .lang-link{
+                text-align: center;
+              }
+            }     
+          }
+        }
+        .login{
+          position: relative;
+          &:hover{
+            .login__downlist{
+              display: block;
+            }
+          }
+          .login__downlist{
+            display: none;
+            position: absolute;
+            top: 2.375rem;
+            right: -0.9375rem;
+            width: 6.4375rem;
+            background:$primary-header-bg;
+            box-shadow: .0625rem .0625rem .9375rem 0 $primary-shadow;
+            border-radius: .25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: .625rem 0;
+            &-item{
+              line-height: 2.25rem;
+              text-align: center;
+              .login-link{
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover{
+                  color: $active-font-color;
+                  i{
+                    border-color: $active-font-color;
+                  }
+                }
+                >i{
+                  width: 1.375rem;
+                  height: 1.375rem;
+                  border: .0625rem solid $primary-font-color;
+                  border-radius: .75rem;
+                  margin-right: .3125rem;
+                  display: block;
+                  text-align: center;
+                  line-height: 1.375rem;
+                }
+              }
+            }     
+          }
+        }
+      }
+    }
+  }
+}
