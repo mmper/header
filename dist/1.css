@@ -428,7 +428,7 @@
     min-width: 900px;
     width: 90%;
     margin: 0 auto;
-    height: 4rem;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -438,7 +438,7 @@
   }
   .hearder__container .logo {
     max-width: 12.5rem;
-    height: 2.5rem;
+    height: 40px;
   }
   .hearder__container .logo img {
     height: 100%;
@@ -465,7 +465,7 @@
   }
   .hearder__container .menu-item > a {
     display: inline-block;
-    line-height: 4rem;
+    line-height: 64px;
     width: 100%;
     text-align: center;
     overflow: hidden;
@@ -497,8 +497,8 @@
     display: block;
   }
   .hearder__container .menu-item .submenu .e_li > a {
-    line-height: 3.125rem;
-    height: 3.125rem;
+    line-height: 50px;
+    height: 50px;
     padding-left: 1.25rem;
     width: 100%;
     display: block;
@@ -518,8 +518,8 @@
     border-top: 1px solid #1F94FF;
   }
   .hearder__container .menu-item .submenu .e_li .thr a {
-    line-height: 3.125rem;
-    height: 3.125rem;
+    line-height: 50px;
+    height: 50px;
     padding-left: 1.25rem;
     width: 100%;
     display: block;
@@ -547,8 +547,8 @@
     align-items: center;
   }
   .hearder__container .icons .icon {
-    width: 1.625rem;
-    height: 1.625rem;
+    width: 26px;
+    height: 26px;
     border: 0.0625rem solid #2D303D;
     border-radius: 50vw;
     margin-left: 1.125rem;
@@ -574,11 +574,11 @@
   }
   .hearder__container .icons .search .search_input {
     position: absolute;
-    top: calc(2.35rem/2);
+    top: 19px;
     bottom: 0;
     right: 0;
-    line-height: 1.65rem;
-    height: 1.65rem;
+    line-height: 26px;
+    height: 26px;
     margin-left: 0;
     background-color: #ffffff;
     width: 8.75rem;
@@ -602,8 +602,8 @@
     top: 0;
     right: 0;
     cursor: pointer;
-    width: 1.625rem;
-    line-height: 1.625rem;
+    width: 26px;
+    line-height: 26px;
     border: 0;
     display: block;
     background: transparent;
@@ -638,7 +638,7 @@
     overflow-y: scroll;
   }
   .hearder__container .icons .lang .lang__downlist-item {
-    line-height: 2.25rem;
+    line-height: 36px;
     text-align: center;
     font-size: .75rem;
   }
@@ -669,7 +669,7 @@
     padding: .625rem 0;
   }
   .hearder__container .icons .login .login__downlist-item {
-    line-height: 2.25rem;
+    line-height: 36px;
     text-align: center;
   }
   .hearder__container .icons .login .login__downlist-item .login-link {
@@ -717,7 +717,7 @@ body {
 
 /* 字体自适应*/
 :root {
-  font-size: 10px;
+  font-size: 14px;
 }
 
 body {
