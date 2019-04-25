@@ -1,31 +1,41 @@
 /************** pc ************/
 /************** mobile ***************/
 @media screen and (min-width: 768px) {
-  body {
-    color: #2D303D;
-  }
-  body a {
-    color: #2D303D;
-  }
-  body a:hover {
-    color: #1F94FF;
-  }
-  body .iconfont {
-    font-size: 100%;
-  }
   .mobile {
     display: none;
   }
+  .pc {
+    height: 100%;
+    width: 100%;
+    max-width: 1170px;
+    position: relative;
+    padding-top: 64px;
+    padding: 64px 5% 0;
+  }
   .hearder {
+    color: #2D303D;
+    font-size: calc(1rem + (2 - 1) * ((100vw - 768px)/ (1200 - 800)));
     background-color: #ffffff;
     box-shadow: 0px 0.3125rem 0.625rem rgba(0, 0, 0, 0.09);
+    position: fixed;
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
+  .hearder a {
+    color: #2D303D;
+  }
+  .hearder a:hover {
+    color: #1F94FF;
+  }
+  .hearder .iconfont {
+    font-size: 100%;
   }
   .hearder.resize {
     box-shadow: none;
   }
   .hearder__container {
-    max-width: 1170px;
-    min-width: 900px;
     width: 90%;
     margin: 0 auto;
     height: 64px;
@@ -82,7 +92,7 @@
   .hearder__container .menu-item .submenu {
     display: none;
     position: absolute;
-    top: 3.375rem;
+    top: 65px;
     left: 0;
     width: 9.75rem;
     background: #fff;
@@ -160,7 +170,6 @@
   }
   .hearder__container .icons .icon a {
     color: #2D303D;
-    font-size: .75rem;
   }
   .hearder__container .icons .icon:hover {
     border-color: #1F94FF;
@@ -225,7 +234,7 @@
   .hearder__container .icons .lang .lang__downlist {
     display: none;
     position: absolute;
-    top: 3.375rem;
+    top: 54px;
     left: 0;
     width: 3.9375rem;
     padding: .625rem 0;
@@ -240,7 +249,6 @@
   .hearder__container .icons .lang .lang__downlist-item {
     line-height: 36px;
     text-align: center;
-    font-size: .75rem;
   }
   .hearder__container .icons .lang .lang__downlist-item:hover .lang-link {
     color: #1F94FF;
@@ -257,7 +265,7 @@
   .hearder__container .icons .login .login__downlist {
     display: none;
     position: absolute;
-    top: 2.375rem;
+    top: 36px;
     right: -0.9375rem;
     width: 6.4375rem;
     background: #ffffff;

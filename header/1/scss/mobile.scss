@@ -21,30 +21,31 @@
 }
 @media screen and (max-width: 768px) {
   html {
-    font-size: 14px;
     overflow: hidden;
   }
   body{
-    color: $primary-font-color;
     overflow: hidden;
-    a{
-      color: $primary-font-color;
-      &:hover {
-        color: $primary-font-color;
-        text-decoration: none;
-      }
-      &:focus{
-        color: $primary-font-color;
-        text-decoration: none;
-      }
-    }
   }
   .pc {
     display: none;
   }
   .mobile {
+    color: $primary-font-color;
     margin: 0 auto;
     height: 100%;
+    .header, .m_nav {
+      a{
+        color: $primary-font-color;
+        &:hover {
+          color: $primary-font-color;
+          text-decoration: none;
+        }
+        &:focus{
+          color: $primary-font-color;
+          text-decoration: none;
+        }
+      }
+    }
     .header {
       margin-left: 0%;
       width: 100%;

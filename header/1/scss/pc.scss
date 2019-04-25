@@ -14,8 +14,27 @@
   -ms-transform: $in;
 }
 @media screen and (min-width: 768px) {
-  body{
+  &.mobile {
+    display: none;
+  }
+  .pc {
+    height: 100%;
+    width: 100%;
+    max-width: 1170px;
+    position: relative;
+    padding-top: 64px;
+    padding: 64px 5% 0;
+  }
+  .hearder {
     color: $primary-font-color;
+    font-size: calc(1rem + (2 - 1) * ((100vw - 768px)/ (1200 - 800)));
+    background-color: $primary-header-bg;
+    box-shadow: 0px .3125rem .625rem $primary-shadow;
+    position: fixed;
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+    width: 100%;
     a{
       color: $primary-font-color;
       &:hover{
@@ -25,19 +44,12 @@
     .iconfont{
       font-size: 100%;
     }
-  }
-  &.mobile {
-    display: none;
-  }
-  .hearder {
-    background-color: $primary-header-bg;
-    box-shadow: 0px .3125rem .625rem $primary-shadow;
     &.resize{
       box-shadow: none;
     }
     &__container{
-      max-width: 1170px;
-      min-width: 900px;
+      // max-width: 1170px;
+      // min-width: 900px;
       width: 90%;
       margin: 0 auto;
       height: 64px;
@@ -93,7 +105,7 @@
           .submenu {
             display:none;
             position: absolute;
-            top: 3.375rem;
+            top: 65px;
             left:0;
             width: 9.75rem;
             background: #fff;
@@ -165,7 +177,6 @@
           cursor: pointer;
           a{
             color: $primary-font-color;
-            font-size: .75rem;
           }
           &:hover{
             border-color: $active-font-color;
@@ -234,7 +245,7 @@
           .lang__downlist{
             display: none;
             position: absolute;
-            top: 3.375rem;
+            top: 54px;
             left: 0;
             width: 3.9375rem;
             padding: .625rem 0;
@@ -248,7 +259,6 @@
             &-item{
               line-height: 36px;
               text-align: center;
-              font-size: .75rem;
               &:hover{
                 .lang-link{
                   color: $active-font-color;
@@ -270,7 +280,7 @@
           .login__downlist{
             display: none;
             position: absolute;
-            top: 2.375rem;
+            top: 36px;
             right: -0.9375rem;
             width: 6.4375rem;
             background:$primary-header-bg;

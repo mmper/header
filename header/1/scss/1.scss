@@ -22,27 +22,6 @@ body {
 *{
   font-family: 'HiraginoSansGB-W3','Arial';
 }
-/* 字体自适应*/
-$min-font-size: 1.4rem;
-$max-font-size: 1.6rem;
-$min-screen: 768px;
-$max-screen: 1200px;
-
 :root {
   font-size: 14px;
-}
-
-body {
-  font-size: $min-font-size;
-}
-
-@media (min-width: $min-screen) and (max-width: $max-screen) {
-  body {
-    font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
-  }
-}
-@media (min-width: $max-screen) {
-  body {
-    font-size: $max-font-size;
-  }
 }
