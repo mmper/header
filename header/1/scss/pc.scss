@@ -17,24 +17,40 @@
   &.mobile {
     display: none;
   }
+  //滚动条的设置
+  ::-webkit-scrollbar {
+    width:5px;
+    height:9px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color:#ddd;
+    background-clip:padding-box;
+    min-height:28px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color:#bbb;
+  }
   .pc {
+    background-color: $bg;
     height: 100%;
     width: 100%;
     max-width: 1170px;
     position: relative;
     padding-top: 64px;
     padding: 64px 5% 0;
+    margin: 0 auto;
   }
   .hearder {
     color: $primary-font-color;
     font-size: calc(1rem + (2 - 1) * ((100vw - 768px)/ (1200 - 800)));
     background-color: $primary-header-bg;
     box-shadow: 0px .3125rem .625rem $primary-shadow;
-    position: fixed;
+    position: absolute;
     z-index: 5;
     top: 0px;
     left: 0px;
     width: 100%;
+    max-width: 1170px;
     a{
       color: $primary-font-color;
       &:hover{
@@ -54,6 +70,7 @@
       .logo {
         max-width: 12.5rem;
         height: 40px;
+        margin-right: 15px;
         img{
           height: 100%;
         }
@@ -152,6 +169,7 @@
       .icons {
         display: flex;
         height: 100%;
+        margin-left: 15px;
         .box{
           display: flex;
           align-items: center;
@@ -159,7 +177,7 @@
         .icon {
           width: 26px;
           height: 26px;
-          border: .0625rem  solid $primary-font-color;
+          border: .0625rem  solid $primary-icon-border-color;
           border-radius: 50vw;
           margin-left: 1.125rem;
           text-align: center;
@@ -171,7 +189,7 @@
             color: $primary-font-color;
           }
           &:hover{
-            border-color: $active-font-color;
+            border-color: $active-icon-border-color;
             color: $active-font-color;
             >a{
               color: $active-font-color;
@@ -192,7 +210,7 @@
             width: 8.75rem;
             display: flex;
             align-items: center;
-            border: .0625rem  solid $primary-font-color;
+            border: .0625rem  solid $primary-icon-border-color;
             border-radius: 50vh;
             padding-left: .5rem;
             display: none;
@@ -219,8 +237,12 @@
                 outline: none;
                 background:transparent;
               }
+              i {
+                font-size: 16px;
+              }
               &:hover{
                 i {
+                  font-size: 16px;
                   color: $active-font-color;
                 }
               }
@@ -236,11 +258,12 @@
           }
           .lang__downlist{
             display: none;
+            max-height: 164px;
             position: absolute;
             top: 54px;
             left: 0;
             width: 3.9375rem;
-            padding: .625rem 0;
+            padding: 10px 0;
             background:$primary-header-bg;
             box-shadow: .0625rem .0625rem .9375rem 0 $primary-shadow;
             border-radius: .25rem;
@@ -265,41 +288,60 @@
         .login{
           position: relative;
           &:hover{
-            .login__downlist{
+            .login__downlist, .pull-down{
               display: block;
             }
+          }
+          .pull-down{
+            display: none;
+            position: absolute;
+            top: 31px;
+            right: calc(8.5rem/2 - 1.6rem - 4px);
+            width: 0;
+            height: 0px;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #fff #fff transparent transparent;
+            transform: rotate(-45deg);
+            box-shadow: .0625rem -.0625rem .0925rem $primary-shadow;
+            z-index: 999;
           }
           .login__downlist{
             display: none;
             position: absolute;
             top: 36px;
-            right: -0.9375rem;
-            width: 6.4375rem;
+            right: -1.6rem;
+            width: 8.5rem;
             background:$primary-header-bg;
-            box-shadow: .0625rem .0625rem .9375rem 0 $primary-shadow;
+            box-shadow: .0625rem -.0625rem .9375rem 0 $primary-shadow;
             border-radius: .25rem;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            padding: .625rem 0;
+            padding: .625rem 20px;
+            .line{
+              width: 100%;
+              height: 1px;
+              background: #bbb;
+              margin: 3px 0;
+            }
             &-item{
               line-height: 36px;
-              text-align: center;
+              text-align: left;
               .login-link{
-                text-align: center;
+                text-align: left;
                 display: flex;
                 align-items: center;
-                justify-content: center;
                 &:hover{
                   color: $active-font-color;
                   i{
-                    border-color: $active-font-color;
+                    border-color: $hover-icon-border-color;
                   }
                 }
                 >i{
                   width: 1.375rem;
                   height: 1.375rem;
-                  border: .0625rem solid $primary-font-color;
+                  border: .0625rem solid $primary-icon-border-color;
                   border-radius: .75rem;
                   margin-right: .3125rem;
                   display: block;

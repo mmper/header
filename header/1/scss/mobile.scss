@@ -122,16 +122,16 @@
             font-size: .8rem;
             padding-left: 2.5rem;
             &::-webkit-input-placeholder{
-              color:$placeholder-color;
+              color:$placeholder-mobile-color;
             }
             &::-moz-placeholder{
-              color:$placeholder-color;
+              color:$placeholder-mobile-color;
             }
             &:-moz-placeholder{
-              color:$placeholder-color;
+              color:$placeholder-mobile-color;
             }
             &:-ms-input-placeholder{
-              color:$placeholder-color;
+              color:$placeholder-mobile-color;
             }
           }
           .guanbi{

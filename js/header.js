@@ -91,15 +91,33 @@ $(function () {
 		}
 	}
 	$('.pc .search').on('click', function (e) {
-			$(this).children(":last").css('display','block')
+			// $(this).children(":last").css('display','block')
+			$('.pc .search_input').toggle()
+			$(document).one('click',
+        function() { //对document绑定一个影藏Div方法
+					$('.pc .search_input').hide()
+				});
+				e.stopPropagation()
 		}
 	)
+	$('.pc .search_input').on('click', function(e) {
+		e.stopPropagation() //阻止事件向上冒泡
+	})
 	$('.pc .search_input>.input').on('blur', function (e) {
 		$('.pc .search_input').css('display','none')
 		/** 触发搜索*/
-		$(this)[0].value = ''
 		}
 	)
+	// $(document).on('click', function(e){
+	// 	if($(e.target).closest(".pc .search_input>.input").length == 0){
+	// 		// foo();
+	// 		$('.pc .search_input').css('display','none')
+	// 	}
+	// })
+
+
+
+
 	$('.pc .lang__downlist>.lang__downlist-item').on('click', function (e) {
 		$(this).parent().parent().children(":first").children(":first")[0].innerText = $(this).children()[0].innerText
 	})
