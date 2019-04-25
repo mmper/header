@@ -90,15 +90,6 @@ $(function () {
 			}
 		}
 	}
-	window.onresize= function(){
-		if (document.documentElement.clientWidth<900) {
-			$('.pc .hearder').addClass('resize');
-			$('.pc .hearder__container').addClass('resize');
-		} else {
-			$('.pc .hearder').removeClass('resize');
-			$('.pc .hearder__container').removeClass('resize');
-		}
-	}
 	$('.pc .search').on('click', function (e) {
 			$(this).children(":last").css('display','block')
 		}
