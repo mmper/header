@@ -5,15 +5,15 @@ $(function () {
 			function() {
 				$('.m_nav').hide()
 				$('.m_nav').removeClass('open');
-				$('.mobile .header').removeClass('open')
+				$('.mobile ').removeClass('open')
 			}
 		)
 		if ($(".m_nav").is(":hidden")) {
 			$('.m_nav').addClass('open');
-			$('.mobile .header').addClass('open')
+			$('.mobile').addClass('open')
 		} else {
 			$('.m_nav').removeClass('open');
-			$('.mobile .header').removeClass('open')
+			$('.mobile').removeClass('open')
 		}
 		e.stopPropagation()
 	})
@@ -37,7 +37,7 @@ $(function () {
 		$('.mobile .lang-select').hide()
 		$('.m_nav').hide()
 		$('.m_nav').removeClass('open');
-		$('.mobile .header').removeClass('open')
+		$('.mobile').removeClass('open')
 		if(e && e.stopPropagation) {
 			e.stopPropagation()
 		} else {
