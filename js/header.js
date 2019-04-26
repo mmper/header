@@ -32,7 +32,6 @@ $(function () {
 	})
 
 	$('.mobile .lang__downlist>.lang__downlist-item').on('click', function (e) {
-		
 		$('.mobile .lang-show a')[0].innerText = $(this).children()[0].innerText
 		$('.mobile .lang-select').hide()
 		$('.m_nav').hide()
@@ -48,12 +47,21 @@ $(function () {
 	/* 移动端切换语言 end */
 	$(".mobile .menu > li > a").on('click', function () {
 		$(this).addClass("current").parents().siblings().find("a").removeClass("current");
+		$(".mobile .submenu > li > a").removeClass("sub-current");
+		$(".mobile .submenu > li > .thr").css("display",'none');
+		if ($(this).siblings().length > 0 && $(this).siblings(".submenu").css('display') !== 'none') {
+			$(this).removeClass("current")
+			$(".mobile .submenu > li > a").removeClass("sub-current")
+		}
 		$(this).parents().siblings().find(".submenu").hide(300);
 		$(this).siblings(".submenu").slideToggle(300);
 	})
 
 	$(".mobile .submenu > li > a").on('click', function () {
 		$(this).addClass("sub-current").parents().siblings().find("a").removeClass("sub-current");
+		if ($(this).siblings().length > 0 && $(this).siblings(".thr").css('display') !== 'none') {
+			$(this).removeClass("sub-current")
+		}
 		$(this).parents().siblings().find(".thr").hide(300);
 		$(this).siblings(".thr").slideToggle(300);
 	})
@@ -107,7 +115,6 @@ $(function () {
 		}
 	}
 	$('.pc .search').on('click', function (e) {
-			// $(this).children(":last").css('display','block')
 			$('.pc .search_input').toggle()
 			$(document).one('click',
         function() {

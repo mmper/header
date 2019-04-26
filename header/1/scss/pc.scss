@@ -17,19 +17,6 @@
   &.mobile {
     display: none;
   }
-  //滚动条的设置
-  ::-webkit-scrollbar {
-    width:5px;
-    height:9px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color:#ddd;
-    background-clip:padding-box;
-    min-height:28px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background-color:#bbb;
-  }
   .pc {
     height: 100%;
     width: 100%;

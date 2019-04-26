@@ -25,3 +25,26 @@ body {
 :root {
   font-size: 14px;
 }
+ //滚动条的设置
+ ::-webkit-scrollbar {
+  width:5px;
+  height:9px;
+}
+::-webkit-scrollbar-thumb {
+  background-color:#ddd;
+  background-clip:padding-box;
+  min-height:28px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color:#bbb;
+}
+.main {
+  overflow-y: scroll;
+  &.main-mobile{
+    height: calc(100% - 50px);
+  }
+  div{
+    height: 2000px;
+    width: 100%;
+  }
+}
