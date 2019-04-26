@@ -114,21 +114,13 @@
             align-items: center;
             background-color: $primary-mobile-search-bg;
             display: none;
-            .line{
-              margin: .8rem 1.25rem;
-              position: absolute;
-              width: 1px;
-              height: 50%;
-              background-color: $primary-font-color;
-              display: inline-block;
-            }
             .input{
               background: transparent;
               border: none;
               outline: none;
               height: 100%;
               width: 100%;
-              padding-left: 2.5rem;
+              padding-left: 2rem;
               font-size: 14px;
               &::-webkit-input-placeholder{
                 color:$placeholder-mobile-color;
@@ -287,6 +279,7 @@
             line-height: 3.125rem;
             display: block;
             cursor: pointer;
+            @include ellipsis;
           }
           >a{
             position: relative;

@@ -49,13 +49,13 @@ $(function () {
 	$(".mobile .menu > li > a").on('click', function () {
 		$(this).addClass("current").parents().siblings().find("a").removeClass("current");
 		$(this).parents().siblings().find(".submenu").hide(300);
-		$(this).siblings(".submenu").toggle(300);
+		$(this).siblings(".submenu").slideToggle(300);
 	})
 
 	$(".mobile .submenu > li > a").on('click', function () {
 		$(this).addClass("sub-current").parents().siblings().find("a").removeClass("sub-current");
 		$(this).parents().siblings().find(".thr").hide(300);
-		$(this).siblings(".thr").toggle(300);
+		$(this).siblings(".thr").slideToggle(300);
 	})
 
 	$(".mobile .thr > li > a").on('click', function () {

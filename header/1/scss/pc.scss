@@ -31,13 +31,11 @@
     background-color:#bbb;
   }
   .pc {
-    background-color: $bg;
     height: 100%;
     width: 100%;
     max-width: 1170px;
     position: relative;
     padding-top: 64px;
-    padding: 64px 5% 0;
     margin: 0 auto;
   }
   .hearder {
@@ -45,12 +43,11 @@
     font-size: calc(1rem + (2 - 1) * ((100vw - 768px)/ (1200 - 800)));
     background-color: $primary-header-bg;
     box-shadow: 0px .3125rem .625rem $primary-shadow;
-    position: absolute;
+    position: fixed;
     z-index: 5;
     top: 0px;
     left: 0px;
     width: 100%;
-    max-width: 1170px;
     a{
       color: $primary-font-color;
       &:hover{
@@ -61,7 +58,8 @@
       font-size: 100%;
     }
     &__container{
-      padding: 0 5%;
+      max-width: 1170px;
+      // padding: 0 5%;
       margin: 0 auto;
       height: 64px;
       display: flex;
@@ -83,10 +81,11 @@
         flex-wrap: nowrap;
         align-items: center;
         justify-content:flex-end;
+        // overflow: hidden;
         &-item {
           padding: 0 .5rem;
           position: relative;
-          min-width: 12.5%;
+          min-width: calc((100%-14px)/8);
           &.hide{
             display: none;
           }
@@ -296,7 +295,7 @@
             display: none;
             position: absolute;
             top: 31px;
-            right: calc(8.5rem/2 - 1.6rem - 4px);
+            right: calc(8.5rem/2 - 3.6rem - 4px);
             width: 0;
             height: 0px;
             border-style: solid;
