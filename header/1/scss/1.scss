@@ -19,8 +19,8 @@ body {
 //   font-family: 'Glyphicons Halflings';
 //   src: url('');
 // }
-*{
-  font-family: 'HiraginoSansGB-W3','Arial';
+body{
+  font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
 }
 :root {
   font-size: 14px;
@@ -39,8 +39,23 @@ body {
   background-color:#bbb;
 }
 .main {
-  overflow-y: scroll;
-  &.main-mobile{
-    height: calc(100% - 50px);
+  &.pc-main{
+    height: 100%;
+    width: 100%;
+    max-width: 1170px;
+    position: relative;
+    padding-top: 64px;
+    margin: 0 auto;
   }
+  &.mobile-main{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    &.open {
+      transform: translate3d(260px,0,0);
+      -webkit-transform: translate3d(260px,0,0);
+    }
+  }
+  overflow-y: scroll;
 }

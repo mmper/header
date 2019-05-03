@@ -11,8 +11,7 @@ $(function () {
 		if ($(".m_nav").is(":hidden")) {
 			$('.m_nav').addClass('open');
 			$('.mobile').addClass('open');
-			$('.mobile .navToggle .icon-more_').css('display', 'none');
-			$('.mobile .navToggle .icon-guanbi').css('display', 'block');
+			$('.mobile-main').addClass('open');
 		} else {
 			initmStyle()
 		}
@@ -25,12 +24,11 @@ $(function () {
 	function initmStyle() {
 		$('.m_nav').removeClass('open');
 		$('.mobile ').removeClass('open');
+		$('.mobile-main').removeClass('open');
 		$(".mobile .menu > li > a").removeClass('current');
 		$(".mobile .submenu > li > a").removeClass("sub-current");
 		$(".mobile .submenu").css("display",'none');
 		$(".mobile .submenu > li > .thr").css("display",'none');
-		$('.mobile .navToggle .icon-more_').css('display', 'block');
-		$('.mobile .navToggle .icon-guanbi').css('display', 'none');
 	}
 	/** mobile 切换语言lang */
 	$('.mobile .lang').on('click', function (e) {
@@ -114,6 +112,16 @@ $(function () {
 	/*********************** pc ***********************/
 	/** pc nav展示style */
 	window.onload=function() {
+		adjustNavSizePc();
+		judgeMain();
+		containerMargin();
+	}
+	window.onresize= function(){
+		adjustNavSizePc()
+		containerMargin();
+		judgeMain();
+	}
+	function adjustNavSizePc() {
 		let navSize = $(".hearder__container").outerWidth()
 		if (navSize > 768) {
 			var menu_itemlength = $(".pc .menu .menu-item").length;
@@ -125,6 +133,26 @@ $(function () {
 					$(".page-down").css("display",'block')
 				}
 			}
+		}
+	}
+	function containerMargin() {
+		if (document.documentElement.clientWidth <= 1200 && document.documentElement.clientWidth > 768) {
+			$('.pc .hearder__container').css('margin','0 25px');
+			$('.main.pc-main').css('padding','64px 25px 0 25px');
+		} else if (document.documentElement.clientWidth > 1200){
+			$('.pc .hearder__container').css('margin','0 auto');
+			$('.main.pc-main').css('padding','64px 0 0 0');
+		} else if (document.documentElement.clientWidth <= 768){ 
+			$('.main.mobile-main').css('padding','0 0.625rem');
+		}
+	}
+	function judgeMain() {
+		if (document.documentElement.clientWidth <= 768) {
+			$('.main').addClass('mobile-main');
+			$('.main').removeClass('pc-main');
+		} else {
+			$('.main').addClass('pc-main');
+			$('.main').removeClass('mobile-main');
 		}
 	}
 	/** pc search */
