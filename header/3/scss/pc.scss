@@ -38,23 +38,21 @@
         font-size: 12px;
       }
       &__top {
-        background-color: $hearder-top-bg;
-        height: 48px;
+        height: 128px;
         width: 100%;
+        background-color: $hearder-top-bg;
       }
       &__top-area{
         width: 100%;
         max-width: 1170px;
         margin: 0 auto;
-        height: 48px;
+        height: 128px;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        a {
-          color: $hearder-top-color;
-        }
         .left {
+          width: 25%;
           display: flex;
           align-items: center;
           .box{
@@ -67,9 +65,7 @@
             justify-content: center;
             height: 48px;
             min-width: 3rem;
-            .icon-xiala {
-              color: $hearder-top-color;
-            }
+            
             &:hover{
               .lang__downlist{
                 display: block;
@@ -86,7 +82,7 @@
               left: 0;
               width: 3.9375rem;
               padding: 10px 0;
-              background:$primary-header-bg;
+              background: $hearder-top-bg;
               box-shadow: 1px 1px .9375rem 0 $primary-shadow;
               border-radius: .25rem;
               white-space: nowrap;
@@ -134,7 +130,7 @@
               height: 0px;
               border-style: solid;
               border-width: 6px;
-              border-color: $primary-header-bg $primary-header-bg transparent transparent;
+              border-color: $hearder-top-bg $hearder-top-bg transparent transparent;
               transform: rotate(-45deg);
               box-shadow: 1px -1px .0925rem $primary-shadow;
               z-index: 999;
@@ -145,7 +141,7 @@
               top: 48px;
               left: -1.2rem;
               width: 8.5rem;
-              background:$primary-header-bg;
+              background: $hearder-top-bg;
               box-shadow: 1px -1px .9375rem 0 $primary-shadow;
               border-radius: .25rem;
               white-space: nowrap;
@@ -190,14 +186,36 @@
             }
           }
         }
-        .right {
+        .center {
+          width: 50%;
           display: flex;
           align-items: center;
+          justify-content: center;
+          .logo {
+            max-width: 18.75rem;
+            height: 60px;
+            img{
+              height: 100%;
+            }
+          }
+        }
+        .right {
+          width: 25%;
           font-size: 12px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
           .cc {
-            margin-left: 1.5rem;
             max-width: 200px;
+            margin-bottom: 5px;
             @include ellipsis;
+            text-align: center;
+            &.contact {
+              font-size: 16px;
+              a {
+                color: $primary-header-bg;
+              }
+            }
           }
         }
       }
@@ -208,30 +226,20 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .logo {
-          max-width: 12.5rem;
-          height: 40px;
-          img{
-            height: 100%;
-          }
-        }
         .menu {
           flex:1;
           height: 100%;
-          max-width: 82%;
-          min-width: 70%;
+          max-width: calc(100% - 30px);
           display: flex;
           flex-wrap: nowrap;
           align-items: center;
-          justify-content:flex-end;
-          padding: 0 15px;
+          justify-content: center;
           &-item {
-            padding: 0 .5rem;
             position: relative;
-            min-width: 12.2%;
-            min-width: calc((100%-14px)/8);
-            min-width: -moz-calc((100%-14px)/8);
-            min-width: -webkit-calc((100%-14px)/8);
+            min-width: 9.5%;
+            min-width: calc((100% - 40px)/10);
+            min-width: -moz-calc((100% - 40px)/10);
+            min-width: -webkit-calc((100% - 40px)/10);
             &.hide{
               display: none;
             }
@@ -246,15 +254,7 @@
               width: 100%;
               text-align: center;
               @include ellipsis;
-              color: $primary-font-color;
-              &:hover{
-                color: $active-font-color;
-              }
-            }
-            &.active {
-              >a {
-                color: $active-font-color;
-              }
+              color: $hearder-menu-color;
             }
             .submenu {
               display:none;
@@ -262,7 +262,7 @@
               top: 65px;
               left:0;
               width: 9.75rem;
-              background: $primary-header-bg;
+              background: $hearder-top-bg;
               border-radius:0 0 .25rem .25rem;
               box-shadow:0 1.25rem 2.5rem .625rem $primary-shadow;
               border-top: 1px solid $active-font-color;
@@ -287,7 +287,7 @@
                   top: -1px;
                   right: -9.75rem;
                   width: 9.75rem;
-                  background: $primary-header-bg;
+                  background: $hearder-top-bg;
                   border-radius:0 0 .25rem .25rem;
                   box-shadow:0 1.25rem 2.5rem .625rem $primary-shadow;
                   border-top: 1px solid $active-font-color;
@@ -303,16 +303,32 @@
               }
             }
           }
-          .page-down,  .page-up{ 
+          .page-down, .page-up{ 
             height: 64px;
             line-height: 64px;
+            width: 30px;
+            a {
+              height: 64px;
+              line-height: 64px;
+              width: 30px;
+              display: flex;
+            }
+            i {
+              color: $hearder-menu-color;
+            }
           }
           .page-down {
             display: none;
+            a {
+              justify-content: flex-start;
+            }
           }
           .page-up{
             display: none;
             @include transform(rotate(-180deg));
+            a {
+              justify-content: flex-end;
+            }
           }
         }
         .icons {
@@ -349,20 +365,12 @@
           }
           .search{
             position: relative;
-            width: 48px;
+            width:30px;
             text-align: right;
             display: flex;
-            justify-content: space-between;
-            padding-left: 8px;
-            &:hover{
-              i {
-                color: $hearder-top-bg;
-              }
-            }
-            .line {
-              height: 15px;
-              width: 1px;
-              background: $primary-icon-border-color;
+            justify-content: flex-end;
+            i {
+              color: $hearder-menu-color
             }
             .search_input {
               position: absolute;
@@ -370,12 +378,12 @@
               right: -7px;
               height: 52px;
               margin-left: 0;
-              background-color: $primary-header-bg;
+              background-color: $hearder-top-bg;
               width: 243px;
               display: flex;
               align-items: center;
               border-style: solid;
-              border-color: $hearder-top-bg;
+              border-color: $primary-header-bg;
               border-right-width: 12px;
               border-left-width: 12px;
               border-top-width: 8px;
@@ -411,7 +419,7 @@
               left: 0;
               width: 3.9375rem;
               padding: 10px 0;
-              background:$primary-header-bg;
+              background:$hearder-top-bg;
               box-shadow: 1px 1px .9375rem 0 $primary-shadow;
               border-radius: .25rem;
               white-space: nowrap;
