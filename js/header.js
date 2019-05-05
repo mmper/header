@@ -47,6 +47,7 @@ $(function () {
 		$('.m_nav').hide()
 		$('.m_nav').removeClass('open');
 		$('.mobile').removeClass('open')
+		$('.mobile-main').removeClass('open');
 		if(e && e.stopPropagation) {
 			e.stopPropagation()
 		} else {
