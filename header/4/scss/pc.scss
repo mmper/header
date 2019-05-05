@@ -17,7 +17,7 @@
   &.mobile {
     display: none;
   }
-  .pc1 {
+  .pc4 {
     .hearder {
       color: $primary-font-color;
       font-size: calc(1rem + (2 - 1) * ((100vw - 768px)/ (1200 - 800)));
@@ -52,7 +52,6 @@
           flex:1;
           height: 100%;
           max-width: 70%;
-          min-width: 65%;
           display: flex;
           flex-wrap: nowrap;
           align-items: center;
