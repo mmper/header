@@ -1,5 +1,5 @@
 
-@import './variable.scss';
+@import './m_variable.scss';
 
 @for $i from 1 to 15 {
   .mobile>.m_nav>.ul>li:nth-child(#{$i}) {
@@ -30,8 +30,29 @@
   .pc {
     display: none;
   }
+  #mobile-temp {
+    color: $primary-m-font-color;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .main {
+    &.mobile-main{
+      height: calc(100% - 50px);
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+      -webkit-transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+      z-index: 1000;
+      &.open {
+        transform: translate3d(260px,0,0);
+        -webkit-transform: translate3d(260px,0,0);
+      }
+    }
+  }
   .mobile {
-    color: $primary-font-color;
+    color: $primary-m-font-color;
     margin: 0 auto;
     height: 100%;
     &.open{
@@ -76,7 +97,7 @@
       z-index: 1000;
       position: relative;
       height: 100%;
-      box-shadow: 0 .9375rem 1.5rem $primary-shadow;
+      box-shadow: 0 .9375rem 1.5rem $primary-mobile-shadow;
       width: 100%;
       transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
       -webkit-transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);

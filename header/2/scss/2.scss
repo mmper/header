@@ -38,22 +38,14 @@ body{
   background-color:#bbb;
 }
 .main {
-  // height: 1000px;
+  overflow-y: scroll;
   &.pc-main{
     width: 100%;
     max-width: 1170px;
     position: relative;
     margin: 0 auto;
   }
-  &.mobile-main{
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    &.open {
-      transform: translate3d(260px,0,0);
-      -webkit-transform: translate3d(260px,0,0);
-    }
+  .main-body{
+    height: 1000px;
   }
-  overflow-y: scroll;
 }

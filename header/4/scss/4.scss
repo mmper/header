@@ -1,5 +1,4 @@
 @import './variable.scss';
-@import './mobile.scss';
 @import './pc.scss';
 
 html {
@@ -39,6 +38,7 @@ body{
   background-color:#bbb;
 }
 .main {
+  overflow-y: scroll;
   &.pc-main{
     width: 100%;
     max-width: 1170px;
@@ -46,15 +46,4 @@ body{
     padding-top: 64px;
     margin: 0 auto;
   }
-  &.mobile-main{
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    &.open {
-      transform: translate3d(260px,0,0);
-      -webkit-transform: translate3d(260px,0,0);
-    }
-  }
-  overflow-y: scroll;
 }

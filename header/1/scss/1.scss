@@ -38,6 +38,7 @@ body{
   background-color:#bbb;
 }
 .main {
+  overflow-y: scroll;
   &.pc-main{
     width: 100%;
     max-width: 1170px;
@@ -45,17 +46,7 @@ body{
     padding-top: 64px;
     margin: 0 auto;
   }
-  &.mobile-main{
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    -webkit-transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-    &.open {
-      transform: translate3d(260px,0,0);
-      -webkit-transform: translate3d(260px,0,0);
-    }
+  .main-body{
+    height: 1000px;
   }
-  overflow-y: scroll;
 }
