@@ -8,6 +8,9 @@ $(function () {
 		adjustNavSizePc4();
 		adjustNavSizePc5();
 		adjustNavSizePc6();
+		adjustNavSizePc7();
+		adjustNavSizePc9();
+		adjustNavSizePc10();
 		judgeMain();
 		containerMargin();
 	}
@@ -18,6 +21,9 @@ $(function () {
 		adjustNavSizePc4();
 		adjustNavSizePc5();
 		adjustNavSizePc6();
+		adjustNavSizePc7();
+		adjustNavSizePc9();
+		adjustNavSizePc10();
 		containerMargin();
 		judgeMain();
 	}
@@ -44,18 +50,26 @@ $(function () {
 			$('.pc .hearder__top').css('padding','0 25px');
 			$('.main1.pc-main').css('padding','64px 25px 0 25px');
 			$('.main2.pc-main').css('padding','0 25px');
+			$('.main3.pc-main').css('padding','192px 25px 0 25px');
 			$('.main4.pc-main').css('padding','112px 25px 0 25px');
 			$('.main5.pc-main').css('padding','192px 25px 0 25px');
 			$('.main6.pc-main').css('padding','192px 25px 0 25px');
+			$('.main7.pc-main').css('padding','112px 25px 0 25px');
+			$('.main9.pc-main').css('padding','192px 25px 0 25px');
+			$('.main10.pc-main').css('padding','192px 25px 0 25px');
 		} else if (document.documentElement.clientWidth > 1200){
 			$('.pc .hearder__container').css('margin','0 auto');
 			$('.pc2 .subMenu').css('padding','0');
 			$('.pc .hearder__top').css('padding','0');
 			$('.main1.pc-main').css('padding','64px 0 0 0');
 			$('.main2.pc-main').css('padding','0');
+			$('.main3.pc-main').css('padding','192px 0 0 0');
 			$('.main4.pc-main').css('padding','112px 0 0 0');
 			$('.main5.pc-main').css('padding','192px 25px 0 25px');
 			$('.main6.pc-main').css('padding','192px 0 0 0');
+			$('.main7.pc-main').css('padding','112px 0 0 0');
+			$('.main9.pc-main').css('padding','192px 0 0 0');
+			$('.main10.pc-main').css('padding','192px 0 0 0');
 		} else if (document.documentElement.clientWidth <= 768){ 
 			$('.main.mobile-main').css('padding','0 0.625rem');
 		}
@@ -359,7 +373,6 @@ $('.pc5 .search_input>.input').on('blur', function (e) {
 	}
 )
 /** pc search 关闭 */
-
 $('.pc5 .search_input .icon-guanbi').on('click', function(e) {
 	$('.pc5 .search_input').hide()
 	if(e && e.stopPropagation) {
@@ -443,6 +456,217 @@ $('.pc6 .menu .page-up').on('click', function () {
 				menu_item[i].classList.add('hide')
 				$(".pc6 .page-down").css("display",'block')
 				$(".pc6 .page-up").css("display",'none')
+			}
+		}
+})
+
+/*********************** pc7 ***********************/
+function adjustNavSizePc7() {
+	let navSize = $(".pc7 .hearder__container").outerWidth()
+	if (navSize > 768) {
+		var menu_itemlength = $(".pc7 .menu .menu-item").length;
+		var menu_item = $(".pc7 .menu .menu-item")
+		for (var i=0;i < menu_itemlength;i++) {
+			if (i>7){
+				if ($(".pc7 .page-up").css("display") == 'none') {
+					$(".pc7 .menu").css("justify-content","center")
+					menu_item[i].classList.add('hide')
+					$(".pc7 .page-down").css("display",'block')
+				}
+			}
+		}
+	}
+}
+/** pc search */
+$('.pc7 .search').on('click', function (e) {
+	$('.pc7 .search_input').toggle()
+	$(document).one('click',
+		function() {
+			$('.pc7 .search_input').hide();
+		});
+		e.stopPropagation()
+	}
+)
+/** pc search input */
+$('.pc7 .search_input').on('click', function(e) {
+	e.stopPropagation() //阻止事件向上冒泡
+})
+$('.pc7 .search_input>.input').on('blur', function (e) {
+	$('.pc7 .search_input').css('display','none')
+	/** 触发搜索*/
+	}
+)
+/** pc search 关闭 */
+$('.pc7 .search_input .icon-guanbi').on('click', function(e) {
+	$('.pc7 .search_input').hide()
+	if(e && e.stopPropagation) {
+		e.stopPropagation()
+	} else {
+			window.event.cancelBubble = true
+	}
+	e.preventDefault()
+})
+/** pc 语言切换 */
+$('.pc7 .lang__downlist>.lang__downlist-item').on('click', function (e) {
+	$(this).parent().parent().children(":first").children(":first")[0].innerText = $(this).children()[0].innerText
+})
+/** pc nav item>8 翻页 向后*/
+$('.pc7 .menu .page-down').on('click', function () {
+	$('.pc7 .menu .menu-item.hide').removeClass('hide')
+	var menu_itemlength = $(".pc7 .menu .menu-item").length;
+		var menu_item = $(".pc7 .menu .menu-item")
+		for (var i=0;i < menu_itemlength;i++) { 
+			if (i<(menu_itemlength-8)){
+				menu_item[i].classList.add('hide');
+				$(".pc7 .page-down").css("display",'none');
+				$(".pc7 .page-up").css("display",'block');
+			}
+		}
+})
+/** pc nav item>8 翻页 向前*/
+$('.pc7 .menu .page-up').on('click', function () {
+	$('.pc7 .menu .menu-item.hide').removeClass('hide')
+	var menu_itemlength = $(".pc7 .menu .menu-item").length;
+		var menu_item = $(".pc7 .menu .menu-item")
+		for (var i=0;i < menu_itemlength;i++) { 
+			if (i>7){
+				menu_item[i].classList.add('hide')
+				$(".pc7 .page-down").css("display",'block')
+				$(".pc7 .page-up").css("display",'none')
+			}
+		}
+})
+
+
+/*********************** pc9 ***********************/
+function adjustNavSizePc9() {
+	let navSize = $(".pc9 .hearder__container").outerWidth()
+	if (navSize > 768) {
+		var menu_itemlength = $(".pc9 .menu .menu-item").length;
+		var menu_item = $(".pc9 .menu .menu-item")
+		for (var i=0;i < menu_itemlength;i++) {
+			if (i>9){
+				if ($(".pc9 .page-up").css("display") == 'none') {
+					menu_item[i].classList.add('hide')
+					$(".pc9 .page-down").css("display",'block')
+					$(".pc9 .menu .menu-item>a").css("text-align",'left')
+				}
+			}
+		}
+	}
+}
+/** pc 语言切换 */
+$('.pc9 .lang__downlist>.lang__downlist-item').on('click', function (e) {
+	$(this).parent().parent().children(":first").children(":first")[0].innerText = $(this).children()[0].innerText
+})
+/** pc nav item>10 翻页 向后*/
+$('.pc9 .menu .page-down').on('click', function () {
+	$('.pc9 .menu .menu-item.hide').removeClass('hide')
+	var menu_itemlength = $(".pc9 .menu .menu-item").length;
+		var menu_item = $(".pc9 .menu .menu-item")
+		for (var i=0;i < menu_itemlength;i++) { 
+			if (i<(menu_itemlength-10)){
+				menu_item[i].classList.add('hide');
+				$(".pc9 .page-down").css("display",'none');
+				$(".pc9 .page-up").css("display",'block');
+			}
+		}
+})
+/** pc nav item>10 翻页 向前*/
+$('.pc9 .menu .page-up').on('click', function () {
+	$('.pc9 .menu .menu-item.hide').removeClass('hide')
+	var menu_itemlength = $(".pc9 .menu .menu-item").length;
+		var menu_item = $(".pc9 .menu .menu-item")
+		for (var i=0;i < menu_itemlength;i++) { 
+			if (i>9){
+				menu_item[i].classList.add('hide')
+				$(".pc9 .page-down").css("display",'block')
+				$(".pc9 .page-up").css("display",'none')
+			}
+		}
+})
+
+/*********************** pc10 ***********************/
+function adjustNavSizePc10() {
+	let navSize = $(".pc10 .hearder__container").outerWidth()
+	if (navSize > 768) {
+		var menu_itemlength = $(".pc10 .menu .menu-item").length;
+		var menu_item = $(".pc10 .menu .menu-item")
+		for (var i=0;i < menu_itemlength;i++) {
+			if (i>9){
+				if ($(".pc10 .page-up").css("display") == 'none') {
+					menu_item[i].classList.add('hide')
+					$(".pc10 .page-down").css("display",'block')
+					$(".pc10 .menu .menu-item>a").css("text-align",'left')
+				}
+			}
+		}
+	}
+}
+/** pc search */
+$('.pc10 .search').on('click', function (e) {
+	$('.pc10 .search_input').toggle()
+	if ($('.pc10 .search_input').is(":visible")) {
+		$('.pc10 .hearder').addClass('search-open');
+		$('.pc10 .menu').addClass('search-open');
+	}
+	$(document).one('click',
+		function() {
+			$('.pc10 .hearder').removeClass('search-open');
+			$('.pc10 .menu').removeClass('search-open');
+			$('.pc10 .search_input').hide();
+		});
+		e.stopPropagation()
+	}
+)
+/** pc search input */
+$('.pc10 .search_input').on('click', function(e) {
+	e.stopPropagation() //阻止事件向上冒泡
+})
+$('.pc10 .search_input>.input').on('blur', function (e) {
+	$('.pc10 .search_input').css('display','none')
+	/** 触发搜索*/
+	}
+)
+/** pc search 关闭 */
+$('.pc10 .search_input .icon-guanbi').on('click', function(e) {
+	$('.pc10 .search_input').hide();
+	$('.pc10 .hearder').removeClass('search-open');
+	$('.pc10 .menu').removeClass('search-open');
+	if(e && e.stopPropagation) {
+		e.stopPropagation()
+	} else {
+			window.event.cancelBubble = true
+	}
+	e.preventDefault()
+})
+/** pc 语言切换 */
+$('.pc10 .lang__downlist>.lang__downlist-item').on('click', function (e) {
+	$(this).parent().parent().children(":first").children(":first")[0].innerText = $(this).children()[0].innerText
+})
+/** pc nav item>10 翻页 向后*/
+$('.pc10 .menu .page-down').on('click', function () {
+	$('.pc10 .menu .menu-item.hide').removeClass('hide')
+	var menu_itemlength = $(".pc10 .menu .menu-item").length;
+		var menu_item = $(".pc10 .menu .menu-item")
+		for (var i=0;i < menu_itemlength;i++) { 
+			if (i<(menu_itemlength-10)){
+				menu_item[i].classList.add('hide');
+				$(".pc10 .page-down").css("display",'none');
+				$(".pc10 .page-up").css("display",'block');
+			}
+		}
+})
+/** pc nav item>10 翻页 向前*/
+$('.pc10 .menu .page-up').on('click', function () {
+	$('.pc10 .menu .menu-item.hide').removeClass('hide')
+	var menu_itemlength = $(".pc10 .menu .menu-item").length;
+		var menu_item = $(".pc10 .menu .menu-item")
+		for (var i=0;i < menu_itemlength;i++) { 
+			if (i>9){
+				menu_item[i].classList.add('hide')
+				$(".pc10 .page-down").css("display",'block')
+				$(".pc10 .page-up").css("display",'none')
 			}
 		}
 })
