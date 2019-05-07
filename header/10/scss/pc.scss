@@ -1,18 +1,6 @@
 @import './variable.scss';
+@import '../../../scss/mixin/index.scss';
 
-
-@mixin ellipsis() {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-@mixin transform($in) {
-  transform: $in;
-  -webkit-transform: $in;
-  -moz-transform: $in;
-  -o-transform: $in;
-  -ms-transform: $in;
-}
 @media screen and (min-width: 769px) {
   &.mobile {
     display: none;
@@ -51,21 +39,30 @@
         margin: 0 auto;
         height: 128px;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        @include flex();
+        @include flex-pack-justify();
+        @include  flex-align-center();
         .right {
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
+          // display: flex;
+          // align-items: center;
+          // justify-content: flex-end;
+          @include flex();
+          @include  flex-align-center();
+          @include flex-pack-end();
           .box{
             margin-right: 1.5rem;
           }
           .lang{
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             height: 48px;
             min-width: 3rem;
             
@@ -88,9 +85,7 @@
               background: $hearder-top-bg;
               box-shadow: 1px 1px .9375rem 0 $primary-shadow;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow-x: hidden;
-              text-overflow: ellipsis;
+              @include  ellipsis();
               overflow-y: scroll;
               z-index: 999;
               a {
@@ -114,9 +109,12 @@
             position: relative;
             height: 48px;
             min-width: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             >a{
               font-size: 12px;
             }
@@ -134,7 +132,7 @@
               border-style: solid;
               border-width: 6px;
               border-color: $hearder-top-bg $hearder-top-bg transparent transparent;
-              transform: rotate(-45deg);
+              @include transform(rotate(-45deg));
               box-shadow: 1px -1px .0925rem $primary-shadow;
               z-index: 999;
             }
@@ -147,9 +145,7 @@
               background: $hearder-top-bg;
               box-shadow: 1px -1px .9375rem 0 $primary-shadow;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis();
               padding: .625rem 20px;
               z-index: 999;
               a {
@@ -166,8 +162,10 @@
                 text-align: left;
                 .login-link{
                   text-align: left;
-                  display: flex;
-                  align-items: center;
+                  // display: flex;
+                  // align-items: center;
+                  @include flex();
+                  @include flex-align-center();
                   &:hover{
                     color: $active-font-color;
                     i{
@@ -191,9 +189,12 @@
         }
         .left {
           max-width: 12.5rem;
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
+          // display: flex;
+          // align-items: center;
+          // justify-content: flex-start;
+          @include flex();
+          @include flex-align-center();;
+          @include flex-pack-start();
           .logo {
             max-width: 12.5rem;
             height: 40px;
@@ -203,12 +204,16 @@
           }
         }
         .center {
-          flex: 1;
-          font-size: 12px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
+          // flex: 1;
+          // display: flex;
+          // flex-direction: column;
+          // align-items: flex-start;
           margin-left: 20px;
+          font-size: 12px;
+          @include flex();
+          @include flex-1();
+          @include flex-v();
+          @include flex-align-start();
           .cc {
             max-width: 200px;
             margin-bottom: 5px;
@@ -220,17 +225,23 @@
         max-width: 1170px;
         margin: 0 auto;
         height: 64px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        @include flex();
+        @include flex-align-center();
+        @include flex-pack-center();
         position: relative;
         .menu {
           width: 100%;
           height: 100%;
-          display: flex;
+          // display: flex;
           flex-wrap: nowrap;
-          align-items: center;
-          justify-content: center;
+          // align-items: center;
+          // justify-content: center;
+          @include flex();
+          @include flex-align-center();
+          @include flex-pack-center();
           &.search-open{
             border-top: 1px solid $nav-menu-top-line-color;
           }
@@ -311,7 +322,8 @@
               height: 64px;
               line-height: 64px;
               width: 30px;
-              display: flex;
+              // display: flex;
+              @include flex();
             }
             i {
               color: $hearder-menu-color;
@@ -320,23 +332,28 @@
           .page-down {
             display: none;
             a {
-              justify-content: flex-start;
+              // justify-content: flex-start;
+              @include flex-pack-start();
             }
           }
           .page-up{
             display: none;
             @include transform(rotate(-180deg));
             a {
-              justify-content: flex-end;
+              // justify-content: flex-end;
+              @include flex-pack-end()
             }
           }
         }
         .icons {
-          display: flex;
+          // display: flex;
+          @include flex();
           height: 100%;
           .box{
-            display: flex;
-            align-items: center;
+            // display: flex;
+            // align-items: center;
+            @include flex();
+            @include flex-align-center();
           }
           .icon {
             width: 20px;
@@ -345,9 +362,12 @@
             border-radius: 10px;
             margin-left: 1.125rem;
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             cursor: pointer;
             a{
               color: $iconfont-color;
@@ -366,8 +386,10 @@
           .search{
             width:30px;
             text-align: right;
-            display: flex;
-            justify-content: flex-end;
+            // display: flex;
+            // justify-content: flex-end;
+            @include flex();
+            @include flex-pack-end();
             >i {
               color: $hearder-menu-color;
             }
@@ -381,9 +403,12 @@
               display: none;
               z-index: 999;
               >div {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                // display: flex;
+                // justify-content: space-between;
+                // align-items: center;
+                @include flex();
+                @include flex-align-center();
+                @include flex-pack-justify();
                 width: 100%;
                 height: 100%;
                 i {
@@ -402,7 +427,8 @@
                   background-color: $placeholder-color;
                 }
                 .input{
-                  flex:1;
+                  // flex:1;
+                  @include flex-1();
                   background:transparent;
                   outline: none;
                   border: none;
@@ -447,9 +473,7 @@
               background:$hearder-top-bg;
               box-shadow: 1px 1px .9375rem 0 $primary-shadow;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow-x: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
               overflow-y: scroll;
               &-item{
                 line-height: 36px;
@@ -485,7 +509,7 @@
               border-style: solid;
               border-width: 6px;
               border-color: $primary-header-bg $primary-header-bg transparent transparent;
-              transform: rotate(-45deg);
+              @include transform(rotate(-45deg));
               box-shadow: 1px -1px .0925rem $primary-shadow;
               z-index: 999;
             }
@@ -498,9 +522,7 @@
               background:$primary-header-bg;
               box-shadow: 1px -1px .9375rem 0 $primary-shadow;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
               padding: .625rem 20px;
               .line{
                 width: 100%;
@@ -513,8 +535,10 @@
                 text-align: left;
                 .login-link{
                   text-align: left;
-                  display: flex;
-                  align-items: center;
+                  // display: flex;
+                  // align-items: center;
+                  @include flex();
+                  @include flex-align-center();
                   &:hover{
                     color: $active-font-color;
                     i{
