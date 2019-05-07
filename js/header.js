@@ -50,30 +50,12 @@ $(function () {
 			$('.pc .hearder__container').css('margin','0 25px');
 			$('.pc2 .subMenu').css('padding','0 25px');
 			$('.pc .hearder__top').css('padding','0 25px');
-			$('.main1.pc-main').css('padding','64px 25px 0 25px');
-			$('.main2.pc-main').css('padding','0 25px');
-			$('.main3.pc-main').css('padding','192px 25px 0 25px');
-			$('.main4.pc-main').css('padding','112px 25px 0 25px');
-			$('.main5.pc-main').css('padding','192px 25px 0 25px');
-			$('.main6.pc-main').css('padding','192px 25px 0 25px');
-			$('.main7.pc-main').css('padding','112px 25px 0 25px');
-			$('.main8.pc-main').css('padding','192px 25px 0 25px');
-			$('.main9.pc-main').css('padding','192px 25px 0 25px');
-			$('.main10.pc-main').css('padding','192px 25px 0 25px');
+			$('.main.pc-main .main-body').css('padding','0 25px');
 		} else if (document.documentElement.clientWidth > 1200){
 			$('.pc .hearder__container').css('margin','0 auto');
 			$('.pc2 .subMenu').css('padding','0');
 			$('.pc .hearder__top').css('padding','0');
-			$('.main1.pc-main').css('padding','64px 0 0 0');
-			$('.main2.pc-main').css('padding','0');
-			$('.main3.pc-main').css('padding','192px 0 0 0');
-			$('.main4.pc-main').css('padding','112px 0 0 0');
-			$('.main5.pc-main').css('padding','192px 25px 0 25px');
-			$('.main6.pc-main').css('padding','192px 0 0 0');
-			$('.main7.pc-main').css('padding','112px 0 0 0');
-			$('.main8.pc-main').css('padding','192px 0 0 0');
-			$('.main9.pc-main').css('padding','192px 0 0 0');
-			$('.main10.pc-main').css('padding','192px 0 0 0');
+			$('.main.pc-main .main-body').css('padding','0');
 		} else if (document.documentElement.clientWidth <= 768){ 
 			$('.main.mobile-main').css('padding','0 0.625rem');
 		}
