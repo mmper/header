@@ -203,9 +203,6 @@
       height: 64px;
       width: 100%;
       z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       font-size: 1.4rem;
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
@@ -218,11 +215,15 @@
       .logo {
         max-width: 200px;
         height: 40px;
+        // position: absolute;
+        // top: 6px;
+        // left: 0;
         img{
           height: 100%;
         }
       }
       .menu {
+        // position: relative;
         max-width: 1170px;
         margin: 0 auto;
         height: 64px;
@@ -230,14 +231,26 @@
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content:flex-end;
+      //   justify-content:flex-end;
+      //   display: flex;
+      // align-items: center;
+        justify-content: space-between;
+        // padding-left: 200px;
+        .nav {
+          flex: 1;
+          >ul{
+            display: flex;
+            align-items: center;
+            justify-content:flex-end;
+          }
+        }
         &-item {
           padding: 0 .5rem;
           position: relative;
           min-width: 8%;
-          min-width: calc((100% - 250px)/8);
-          min-width: -moz-calc((100% - 220px)/8);
-          min-width: -webkit-calc((100% - 220px)/8);
+          min-width: calc((100% - 30px)/8);
+          min-width: -moz-calc((100% - 30px)/8);
+          min-width: -webkit-calc((100% - 30px)/8);
           &.hide{
             display: none;
           }
