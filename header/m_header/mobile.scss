@@ -269,6 +269,7 @@
       &.open{
         width:260px;
         display: block !important;
+        z-index: 999;
       }
       .top{
         .lang{
