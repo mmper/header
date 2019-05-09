@@ -78,6 +78,7 @@
               display: none;
               max-height: 164px;
               position: absolute;
+              z-index: 999;
               top: 48px;
               left: 0;
               width: 3.9375rem;
@@ -89,7 +90,6 @@
               overflow-x: hidden;
               text-overflow: ellipsis;
               overflow-y: scroll;
-              z-index: 999;
               a {
                 color: $primary-font-color;
               }
@@ -133,7 +133,7 @@
               border-color: $hearder-top-bg $hearder-top-bg transparent transparent;
               transform: rotate(-45deg);
               box-shadow: 1px -1px .0925rem $primary-shadow;
-              z-index: 999;
+              z-index: 1000;
             }
             .login__downlist{
               display: none;
@@ -264,6 +264,7 @@
             .submenu {
               display:none;
               position: absolute;
+              z-index: 999;
               top: 65px;
               left:0;
               width: 9.75rem;
@@ -292,6 +293,7 @@
                 .thr{
                   display: none;
                   position: absolute;
+                  z-index: 999;
                   top: -1px;
                   right: -9.75rem;
                   width: 9.75rem;
@@ -386,13 +388,13 @@
             }
             .search_input {
               position: absolute;
+              z-index: 1;
               top: 0;
               left: 0;
               height: 64px;
               background-color: $primary-header-bg;
               width: 100%;
               display: none;
-              z-index: 999;
               >div {
                 display: flex;
                 justify-content: space-between;
@@ -457,115 +459,6 @@
                   }
                 }
               }
-            }
-          }
-          .lang{
-            position: relative;
-            &:hover{
-              .lang__downlist{
-                display: block;
-              }
-            }
-            .lang-contant {
-              font-size: 12px;
-            }
-            .lang__downlist{
-              display: none;
-              max-height: 164px;
-              position: absolute;
-              top: 54px;
-              left: 0;
-              width: 3.9375rem;
-              padding: 10px 0;
-              background:$hearder-top-bg;
-              box-shadow: 1px 1px .9375rem 0 $primary-shadow;
-              border-radius: .25rem;
-              white-space: nowrap;
-              overflow-x: hidden;
-              text-overflow: ellipsis;
-              overflow-y: scroll;
-              &-item{
-                line-height: 36px;
-                text-align: center;
-                &:hover{
-                  .lang-link{
-                    color: $active-font-color;
-                  }
-                }
-                .lang-link{
-                  text-align: center;
-                }
-              }     
-            }
-          }
-          .login{
-            position: relative;
-            &:hover{
-              .login__downlist, .pull-down{
-                display: block;
-              }
-            }
-            .pull-down{
-              display: none;
-              position: absolute;
-              top: 31px;
-              right: 0.62rem;
-              right: calc(8.5rem/2 - 3.6rem - 4px);
-              right: -moz-calc(8.5rem/2 - 3.6rem - 4px);
-              right: -webkit-calc(8.5rem/2 - 3.6rem - 4px);
-              width: 0;
-              height: 0px;
-              border-style: solid;
-              border-width: 6px;
-              border-color: $primary-header-bg $primary-header-bg transparent transparent;
-              transform: rotate(-45deg);
-              box-shadow: 1px -1px .0925rem $primary-shadow;
-              z-index: 999;
-            }
-            .login__downlist{
-              display: none;
-              position: absolute;
-              top: 36px;
-              right: -1.6rem;
-              width: 8.5rem;
-              background:$primary-header-bg;
-              box-shadow: 1px -1px .9375rem 0 $primary-shadow;
-              border-radius: .25rem;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              padding: .625rem 20px;
-              .line{
-                width: 100%;
-                height: 1px;
-                background: $placeholder-color;
-                margin: 3px 0;
-              }
-              &-item{
-                line-height: 36px;
-                text-align: left;
-                .login-link{
-                  text-align: left;
-                  display: flex;
-                  align-items: center;
-                  &:hover{
-                    color: $active-font-color;
-                    i{
-                      border-color: $hover-icon-border-color;
-                    }
-                  }
-                  >i{
-                    width: 1.375rem;
-                    height: 1.375rem;
-                    border: 1px solid $primary-icon-border-color;
-                    border-radius: .6875rem;
-                    margin-right: .3125rem;
-                    display: block;
-                    text-align: center;
-                    line-height: 1.375rem;
-                  }
-                }
-              }     
             }
           }
         }

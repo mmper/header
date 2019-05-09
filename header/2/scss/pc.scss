@@ -130,11 +130,12 @@
                 border-color: $primary-header-bg $primary-header-bg transparent transparent;
                 transform: rotate(-45deg);
                 box-shadow: 1px -1px .0925rem $primary-shadow;
-                z-index: 999;
+                z-index: 1000;
               }
               .login__downlist{
                 display: none;
                 position: absolute;
+                z-index: 999;
                 top: 36px;
                 left: -1.6rem;
                 width: 8.5rem;
@@ -191,6 +192,7 @@
               position: relative;
               .search_input {
                 position: absolute;
+                z-index: 999;
                 top: 22px;
                 bottom: 0;
                 right: 0;
@@ -201,7 +203,6 @@
                 display: flex;
                 align-items: center;
                 border-bottom: 1px  solid $primary-icon-border-color;
-                z-index: 999;
                 display: none;
                 .input{
                   outline: none;
@@ -213,6 +214,7 @@
                 }
                 .search-btn{
                   position: absolute;
+                  z-index: 999;
                   top: 3px;
                   left: -19px;
                   cursor: pointer;
@@ -259,6 +261,7 @@
                 display: none;
                 max-height: 164px;
                 position: absolute;
+                z-index: 999;
                 top: 54px;
                 right: 0;
                 width: 3.9375rem;
@@ -343,6 +346,7 @@
         .submenu {
           display:none;
           position: absolute;
+          z-index: 999;
           top: 65px;
           left:0;
           width: 9.75rem;
@@ -373,6 +377,7 @@
               display: none;
               position: absolute;
               top: -1px;
+              z-index: 999;
               right: -9.75rem;
               width: 9.75rem;
               background: $primary-header-bg;
