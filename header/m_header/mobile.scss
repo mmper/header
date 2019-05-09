@@ -26,6 +26,8 @@
   body{
     overflow: hidden;
     cursor: pointer;
+    font-size: 1.4rem;
+    // 需要全文1.4rem，则在相应的scss里 如在4.scss里定义body的font-size，这里的font-size删除
   }
   .pc {
     display: none;

@@ -20,9 +20,14 @@ body {
 // }
 body{
   font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+  // 需要全文1.4rem，则在相应的scss里 如在4.scss里定义body的font-size，这里的mobile里font-size删除，header里的也可删除
+  // font-size: 1.4rem;
+  // font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
+  // font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
+  // font-size: -webkit-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
 }
 :root {
-  font-size: 14px;
+  font-size: 10px;
 }
  //滚动条的设置
  ::-webkit-scrollbar {
