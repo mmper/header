@@ -66,14 +66,12 @@ $(function () {
 		$('.pc .search_input').toggle()
 		$('.pc2 .lang').hide()
 		if ($('.pc10 .search_input').is(":visible")) {
-			$('.pc10 .hearder').addClass('search-open');
-			$('.pc10 .menu').addClass('search-open');
+			$('.pc10 .subMenu').addClass('search-open');
 		}
 		$(document).one('click',
 			function() {
 				$('.pc2 .lang').show()
-				$('.pc10 .hearder').removeClass('search-open');
-				$('.pc10 .menu').removeClass('search-open');
+				$('.pc10 .subMenu').removeClass('search-open');
 				$('.pc .search_input').hide()
 			});
 			e.stopPropagation()
