@@ -15,10 +15,10 @@
 
 <body>
   <!-- pc导航 -->
-  <div class="pc pc5">
+  <div class="pc pc5 sTop">
     <header class="hearder">
-      <div class="hearder__top">
-        <div class="hearder__top-area">
+      <div class="hearder__container cup">
+        <div class="hearder__container-area">
           <div class="left">
             <!-- 登录-->
             <div class="login box">
@@ -118,80 +118,81 @@
           </div>
         </div>
       </div>
-      <div class="hearder__container">
+    </header>
+    <div class="subMenu">
         <ul class="menu" id="wrapper" data-item-length="10">
             <li class="page-up">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <i class="iconfont icon-more"></i>
               </a>
             </li>
             <li class="menu-item" title='目录A'>
-                <a href="#">目录A</a>
+                <a href="javascript:void(0)">目录A</a>
             </li>
             <li class="menu-item" title='目录B'>
-              <a href="#">目录B</a>
+              <a href="javascript:void(0)">目录B</a>
               <ul class="submenu">
                 <li class="e_li">
-                  <a href="#">二级目录A</a>
+                  <a href="javascript:void(0)">二级目录A</a>
                 </li>
                 <li class="e_li">
-                  <a href="#" title="二级目录B二级目录B">二级目录B</a>
+                  <a href="javascript:void(0)" title="二级目录B二级目录B">二级目录B</a>
                   <ul class="thr">
-                    <li> <a href="#">三级目录A</a> </li>
-                    <li> <a href="#">三级目录B</a> </li>
-                    <li> <a href="#">三级目录C</a> </li>
-                    <li> <a href="#">三级目录D</a> </li>
+                    <li> <a href="javascript:void(0)">三级目录A</a> </li>
+                    <li> <a href="javascript:void(0)">三级目录B</a> </li>
+                    <li> <a href="javascript:void(0)">三级目录C</a> </li>
+                    <li> <a href="javascript:void(0)">三级目录D</a> </li>
                   </ul>
                 </li>
                 <li class="e_li">
-                  <a href="#">二级目录C</a>
+                  <a href="javascript:void(0)">二级目录C</a>
                 </li>
                 <li class="e_li">
-                  <a href="#">二级目录D</a>
+                  <a href="javascript:void(0)">二级目录D</a>
                   <ul class="thr">
-                    <li> <a href="#">三级目录D三级目录D</a> </li>
-                    <li> <a href="#">三级目录B</a> </li>
-                    <li> <a href="#">三级目录C</a> </li>
-                    <li> <a href="#">三级目录D</a> </li>
+                    <li> <a href="javascript:void(0)">三级目录D三级目录D</a> </li>
+                    <li> <a href="javascript:void(0)">三级目录B</a> </li>
+                    <li> <a href="javascript:void(0)">三级目录C</a> </li>
+                    <li> <a href="javascript:void(0)">三级目录D</a> </li>
                   </ul>
                 </li>
               </ul>
             </li>
             <li class="menu-item">
-                <a href="#">目录C</a>
+                <a href="javascript:void(0)">目录C</a>
             </li>
             <li class="menu-item">
-                <a href="#">目录D</a>
+                <a href="javascript:void(0)">目录D</a>
             </li>
             <li class="menu-item">
-                <a href="#">目录E</a>
+                <a href="javascript:void(0)">目录E</a>
             </li>
             <li class="menu-item">
-                <a href="#">目录F</a>
+                <a href="javascript:void(0)">目录F</a>
             </li>
             <li class="menu-item">
-                 <a href="#">目录G</a>
+                 <a href="javascript:void(0)">目录G</a>
             </li>
             <li class="menu-item">
-                <a href="#">目录H</a>
+                <a href="javascript:void(0)">目录H</a>
             </li>
             <li class="menu-item">
-                <a href="#">目录I</a>
+                <a href="javascript:void(0)">目录I</a>
             </li>
             <li class="menu-item">
-                <a href="#">目录J</a>
+                <a href="javascript:void(0)">目录J</a>
             </li>
             <li class="menu-item">
-                <a href="#">目录K</a>
+                <a href="javascript:void(0)">目录K</a>
             </li>
             <li class="menu-item">
-                <a href="#">目录K</a>
+                <a href="javascript:void(0)">目录K</a>
             </li>
             <li class="menu-item">
-                <a href="#">目录K</a>
+                <a href="javascript:void(0)">目录K</a>
             </li>
             <li class="page-down">
-              <a href="#">
+              <a href="javascript:void(0)">
                 <i class="iconfont icon-more"></i>
               </a>
             </li>
@@ -213,10 +214,8 @@
                   </div>
                 </div>
             </li>
-        </ul>
-        
+        </ul> 
       </div>
-    </header>
   </div>
   <!--移动端的导航-->
   <div class="mobile">
@@ -382,6 +381,13 @@
   <script type="text/javascript" src="../../js/jquery.smint.js"></script>
   <script type="text/javascript" src="../../js/header.js"></script>
   <script type="text/javascript" src="../../js/mheader.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('.subMenu').smint({
+        'scrollSpeed' : 1000
+      });
+    })
+  </script>
 </body>
 
 </html>
