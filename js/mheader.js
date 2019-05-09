@@ -93,11 +93,15 @@ $(function () {
 	$('.mobile .search_bar').on('click', function(e) {
 		e.stopPropagation() //阻止事件向上冒泡
 	})
-	/** mobile 头部search input */
-	$(".mobile .search_bar>.input").on('blur', function () {
-		$('.search>.search_bar').css('display','none')
-		/** 触发搜索*/
-	})
+	$(".mobile .search_bar").keypress(function (e) {
+		if (e.which == 13) {
+			var searchVal = $('.mobile .search_bar input').val();
+			searchVal = searchVal.trim()
+			if (searchVal.length>0) {
+				console.log('start search', searchVal)
+			}
+		}
+	});
 	/** mobile 头部search close*/
 	$(".mobile .search_bar>.guanbi").on('click', function (e) {
 		$('.search>.search_bar').css('display','none')
