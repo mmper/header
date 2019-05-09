@@ -57,13 +57,13 @@
           align-items: center;
           justify-content: flex-end;
           .box{
-            margin-right: 1.5rem;
+            margin-left: 1.5rem;
           }
           .lang{
             position: relative;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             height: 48px;
             min-width: 3rem;
             
@@ -221,7 +221,10 @@
               text-align: right;
               display: flex;
               justify-content: flex-end;
-              i.icon-sousuo {
+              .search-btn{
+                cursor: pointer;
+                border: 0;
+                display:block;
                 width: 30px;
                 height: 30px;
                 display: flex;
@@ -229,11 +232,17 @@
                 justify-content: center;
                 background-color: $primary-header-bg;
                 color: $hearder-menu-color;
+                &:focus{
+                  border: 0;
+                  outline: none;
+                  background-color: $primary-header-bg;
+                }
               }
               .search_input {
                 height: 100%;
                 background-color: $hearder-top-bg;
                 width: 230px;
+                display: block !important;
                 .input{
                   background:transparent;
                   outline: none;

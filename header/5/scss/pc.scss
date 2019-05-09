@@ -377,7 +377,6 @@
             }
           }
           .search{
-            // position: relative;
             width:30px;
             text-align: right;
             display: flex;
@@ -400,15 +399,35 @@
                 align-items: center;
                 width: 100%;
                 height: 100%;
-                i {
+                .search-btn{
+                  cursor: pointer;
+                  border: 0;
+                  display:block;
+                  background:transparent;
+                  width: 30px;
+                  height: 64px;
+                  line-height: 64px;
+                  text-align: left;
+                  &:focus{
+                    border: 0;
+                    outline: none;
+                    background:transparent;
+                  }
+                  &:hover{
+                    i {
+                      color: $active-font-color;
+                    }
+                  }
+                  i {
+                    font-size: 16px;
+                  }
+                }
+                .icon-guanbi{
                   font-size: 16px;
                   width: 30px;
                   height: 64px;
                   line-height: 64px;
                   text-align: right;
-                  &:first-child {
-                    text-align: left;
-                  }
                 }
                 .line {
                   width: 1px;
