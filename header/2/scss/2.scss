@@ -43,6 +43,9 @@ body{
     width: 100%;
     position: relative;
   }
+  &.mobile-main{
+    padding: 0 0.625rem;
+  }
   .main-body{
     max-width: 1170px;
     margin: 0 auto;

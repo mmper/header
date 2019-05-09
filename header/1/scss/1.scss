@@ -44,6 +44,9 @@ body{
     position: relative;
     padding-top: 64px;
   }
+  &.mobile-main{
+    padding: 0 0.625rem;
+  }
   .main-body{
     max-width: 1170px;
     margin: 0 auto;

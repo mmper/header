@@ -156,7 +156,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 
 				
 
-				var goTo =  $(mySelector+'.'+ hash).offset().top-myOffset;
+				var goTo =  $(mySelector+'.'+ hash).offset() && $(mySelector+'.'+ hash).offset().top || 0 -myOffset;
 				
 				// Scroll the page to the desired position!
 				$("html, body").stop().animate({ scrollTop: goTo }, scrollSpeed);
