@@ -67,7 +67,7 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 					$(mySelector+"."+id).height()+$(mySelector+"."+id).position().top, id)
 				);
 			}
-			
+
 
 			///////////////////////////////////
 
@@ -98,10 +98,10 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				if(optionLocs[index] && optionLocs[index][0] <= scrollTop && scrollTop <= optionLocs[index][1]){	
 					if(direction == "up"){
 						$("#"+id).addClass("active");
-						$("#"+optionLocs[index+1]).length > 2 && $("#"+optionLocs[index+1][2]).removeClass("active");
+						// $("#"+optionLocs[index+1][2]).removeClass("active");
 					} else if(index > 0) {
 						$("#"+id).addClass("active");
-						$("#"+optionLocs[index-1]).length > 2 && $("#"+optionLocs[index-1][2]).removeClass("active");
+						// $("#"+optionLocs[index-1][2]).removeClass("active");
 					} else if(direction == undefined){
 						$("#"+id).addClass("active");
 					}
@@ -155,11 +155,13 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 				var hash = $(this).attr('href').split('#')[1];
 
 				
-
-				var goTo =  $(mySelector+'.'+ hash).offset() && $(mySelector+'.'+ hash).offset().top || 0 -myOffset;
+				if ($(mySelector+'.'+ hash).offset()) {
+					var goTo =  $(mySelector+'.'+ hash).offset().top-myOffset;
 				
 				// Scroll the page to the desired position!
 				$("html, body").stop().animate({ scrollTop: goTo }, scrollSpeed);
+				}
+				
 				
 				// if the link has the '.extLink' class it will be ignored 
 		 		// Courtesy of mcpacosy ‏(@mcpacosy)
