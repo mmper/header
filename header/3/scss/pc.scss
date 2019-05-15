@@ -33,7 +33,6 @@
       }
       .iconfont{
         font-size: 12px;
-        color: $iconfont-color;
       }
       &__container {
         height: 128px;
@@ -215,11 +214,23 @@
             max-width: 200px;
             margin-bottom: 5px;
             @include ellipsis;
-            text-align: center;
             &.contact {
               font-size: 16px;
               a {
                 color: $primary-header-bg;
+                i {
+                  padding-right: 3px;
+                }
+              }
+            }
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              span {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
               }
             }
           }
@@ -228,6 +239,7 @@
     }
     .subMenu {
       height: 64px;
+      z-index: 1;
       width: 100%;
       background: $primary-header-bg;
       box-shadow: 0px .3125rem .625rem $primary-shadow;
@@ -254,12 +266,6 @@
           min-width: calc((100% - 60px)/10);
           min-width: -moz-calc((100% - 60px)/10);
           min-width: -webkit-calc((100% - 60px)/10);
-
-          // min-width: 9.5%;
-          // min-width: calc((100% - 14px - 1rem)/10);
-          // min-width: -moz-calc((100% - 14px - 1rem)/10);
-          // min-width: -webkit-calc((100% - 14px - 1rem)/10);
-          // max-width: 10%;
           &.hide{
             display: none;
           }
@@ -274,7 +280,10 @@
             width: 100%;
             text-align: center;
             @include ellipsis;
-            color: $hearder-menu-color;
+            color: $menu-font-color;
+            &:hover {
+              color:$menu-font-hover-color;
+            }
           }
           .submenu {
             display:none;
@@ -344,7 +353,10 @@
             display: flex;
           }
           i {
-            color: $hearder-menu-color;
+            color: $menu-font-color;
+            &:hover {
+              color:$menu-font-hover-color;
+            }
           }
         }
         .page-down {
@@ -399,7 +411,10 @@
             display: flex;
             justify-content: flex-end;
             i {
-              color: $hearder-menu-color
+              color: $menu-font-color;
+              &:hover {
+                color:$menu-font-hover-color;
+              }
             }
             .search_input {
               position: absolute;
@@ -428,6 +443,18 @@
                 height: 100%;
                 padding: 0 0.5rem 0 .375rem;
                 width: 100%;
+                &::-webkit-input-placeholder{
+                  color:$placeholder-color;
+                }
+                &::-moz-placeholder{
+                  color:$placeholder-color;
+                }
+                &:-moz-placeholder{
+                  color:$placeholder-color;
+                }
+                &:-ms-input-placeholder{
+                  color:$placeholder-color;
+                }
               }
             }
           }
