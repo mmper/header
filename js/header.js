@@ -101,8 +101,7 @@ $(function () {
 	/** pc search 关闭 */
 	$('.pc .search_input .icon-guanbi').on('click', function(e) {
 		$('.pc .search_input').hide();
-		$('.pc10 .hearder').removeClass('search-open');
-		$('.pc10 .menu').removeClass('search-open');
+		$('.pc10 .subMenu').removeClass('search-open');
 		if(e && e.stopPropagation) {
 			e.stopPropagation()
 		} else {

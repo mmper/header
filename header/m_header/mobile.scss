@@ -197,7 +197,7 @@
               background:transparent;
             }
             i{
-              font-size: 1.25rem;
+              font-size: 20px;
             }
           }
           .search_bar {
@@ -232,7 +232,7 @@
               }
             }
             .guanbi{
-              font-size: 1.25rem;
+              font-size: 14px;
               width: 50px;
               height: 50px;
               position: absolute;
@@ -282,6 +282,15 @@
           justify-content: space-between;
           align-items: center;
           font-size: 12px;
+          .lang-show{
+            display: flex;
+            height: 50px;
+            // justify-content: space-between;
+            align-items: center;
+            .lang-contant {
+              padding-right: 5px;
+            }
+          }
           .lang-select {
             display: none;
             z-index: 999;
@@ -311,7 +320,7 @@
               overflow: scroll;
               z-index: 999;
               &-item{
-                line-height: 2.125rem;
+                line-height: 44px;
                 text-align: center;
                 @include ellipsis;
                 &:hover{
@@ -377,8 +386,8 @@
         .menu-item{
           a{
             padding: 0 2rem 0 2.5rem;
-            height: 3.125rem;
-            line-height: 3.125rem;
+            height: 44px;
+            line-height: 44px;
             display: block;
             cursor: pointer;
             @include ellipsis;

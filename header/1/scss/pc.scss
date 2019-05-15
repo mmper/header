@@ -165,10 +165,10 @@
             align-items: center;
           }
           .icon {
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             border: 1px  solid $primary-icon-border-color;
-            border-radius: 10px;
+            border-radius: 11px;
             margin-left: 1.125rem;
             text-align: center;
             display: flex;
@@ -317,7 +317,7 @@
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              padding: .625rem 20px;
+              padding: .625rem 15px;
               .line{
                 width: 100%;
                 height: 1px;
@@ -337,15 +337,23 @@
                       border-color: $hover-icon-border-color;
                     }
                   }
+                  &.readonly{
+                    &:hover{
+                      color: $iconfont-color;
+                      i{
+                        border-color: $primary-icon-border-color;
+                      }
+                    }
+                  }
                   >i{
-                    width: 1.375rem;
-                    height: 1.375rem;
+                    width: 22px;
+                    height: 22px;
                     border: 1px solid $primary-icon-border-color;
-                    border-radius: .6875rem;
+                    border-radius: 11px;
                     margin-right: .3125rem;
                     display: block;
                     text-align: center;
-                    line-height: 1.375rem;
+                    line-height: 22px;
                   }
                 }
               }     
