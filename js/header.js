@@ -42,7 +42,7 @@ $(function () {
 			$('.pc .hearder__container').css('margin','0 25px');
 			$('.pc .subMenu').css('padding','0 25px');
 			$('.pc .cup').css({'padding':'0 25px','margin':'0'});
-			$('.main.pc-main .main-body').css('padding','0 20px 0 25px');
+			$('.main.pc-main .main-body').css('padding','0 25px');
 		} else if (document.documentElement.clientWidth > 1200){
 			$('.pc .hearder__container').css('margin','0 auto');
 			$('.pc .subMenu').css('padding','0');
