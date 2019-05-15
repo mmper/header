@@ -32,7 +32,6 @@
       }
       .iconfont{
         font-size: 12px;
-        color: $iconfont-color;
       }
       &__container {
         background-color: $hearder-top-bg;
@@ -157,7 +156,7 @@
               .line{
                 width: 100%;
                 height: 1px;
-                background: $primary-icon-border-color;
+                background: $separator-line-color;
                 margin: 3px 0;
               }
               &-item{
@@ -175,7 +174,7 @@
                   }
                   &.readonly{
                     &:hover{
-                      color: $iconfont-color;
+                      color: $primary-font-color;
                       i{
                         border-color: $primary-icon-border-color;
                       }
@@ -204,6 +203,23 @@
             margin-left: 1.5rem;
             max-width: 200px;
             @include ellipsis;
+            a {
+              display: flex;
+              align-items: center;
+              i {
+                padding-right: 3px;
+                font-size: 14px;
+                &.icon-dianhua1 {
+                  font-size: 12px;
+                }
+              }
+              span {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+            }
+            
           }
         }
       }
@@ -400,7 +416,7 @@
           .line {
             height: 15px;
             width: 1px;
-            background: $primary-icon-border-color;
+            background: $separator-line-color;
           }
           .search_input {
             position: absolute;
@@ -429,6 +445,18 @@
               height: 100%;
               padding: 0 0.5rem 0 .375rem;
               width: 100%;
+              &::-webkit-input-placeholder{
+                color:$placeholder-color;
+              }
+              &::-moz-placeholder{
+                color:$placeholder-color;
+              }
+              &:-moz-placeholder{
+                color:$placeholder-color;
+              }
+              &:-ms-input-placeholder{
+                color:$placeholder-color;
+              }
             }
           }
         }
