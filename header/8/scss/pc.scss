@@ -24,7 +24,7 @@
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -webkit-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
-      background-color: $header-bg;
+      background-color: $hearder-top-bg;
       box-shadow: 0px .3125rem .625rem $shadow-color;
       width: 100%;
       a{
@@ -35,7 +35,7 @@
         color: $iconfont-color;
       }
       &__container{
-        background-color: $header-bg;
+        background-color: $hearder-top-bg;
         height: 48px;
         border-bottom: 1px solid $separator-line-color;
       }
@@ -77,7 +77,7 @@
               left: 0;
               width: 3.9375rem;
               padding: 10px 0;
-              background:$header-bg;
+              background:$hearder-top-bg;
               box-shadow: 1px 1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
               white-space: nowrap;
@@ -85,6 +85,18 @@
               text-overflow: ellipsis;
               overflow-y: scroll;
               z-index: 999;
+              &::-webkit-scrollbar {
+                width:5px;
+                height:9px;
+              }
+              &::-webkit-scrollbar-thumb {
+                background-color:#ddd;
+                background-clip:padding-box;
+                min-height:28px;
+              }
+              &::-webkit-scrollbar-thumb:hover {
+                background-color:#bbb;
+              }
               a {
                 color: $primary-font-color;
               }
@@ -111,6 +123,14 @@
             justify-content: center;
             >a{
               font-size: 12px;
+              display: flex;
+              align-items: center;
+              .sline {
+                height: 8px;
+                width: 1px;
+                background:  $header-top-font-color;
+                margin: 0 4px;
+              }
             }
             &:hover{
               .login__downlist, .pull-down{
@@ -125,7 +145,7 @@
               height: 0px;
               border-style: solid;
               border-width: 6px;
-              border-color: $header-bg $header-bg transparent transparent;
+              border-color: $hearder-top-bg $hearder-top-bg transparent transparent;
               transform: rotate(-45deg);
               box-shadow: 1px -1px .0925rem $shadow-color;
               z-index: 1000;
@@ -136,7 +156,7 @@
               top: 48px;
               left: -1.2rem;
               width: 8.5rem;
-              background:$header-bg;
+              background:$hearder-top-bg;
               box-shadow: 1px -1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
               white-space: nowrap;
@@ -163,7 +183,7 @@
               .line{
                 width: 100%;
                 height: 1px;
-                background: $icon-border-color;
+                background: $separator-line-color;
                 margin: 3px 0;
               }
               &-item{
@@ -181,7 +201,7 @@
                   }
                   &.readonly{
                     &:hover{
-                      color: $iconfont-color;
+                      color: $primary-font-color;
                       i{
                         border-color: $icon-border-color;
                       }
@@ -281,7 +301,7 @@
             top: 65px;
             left:0;
             width: 9.75rem;
-            background: $header-bg;
+            background: $hearder-top-bg;
             border-radius:0 0 .25rem .25rem;
             box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
             border-top: 1px solid $hover-font-color;
@@ -311,7 +331,7 @@
                 top: -1px;
                 right: -9.75rem;
                 width: 9.75rem;
-                background: $header-bg;
+                background: $hearder-top-bg;
                 border-radius:0 0 .25rem .25rem;
                 box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
                 border-top: 1px solid $hover-font-color;
@@ -389,7 +409,7 @@
           .line {
             height: 15px;
             width: 1px;
-            background: $icon-border-color;
+            background: $separator-line-color;
           }
           .search_input {
             position: absolute;
@@ -398,7 +418,7 @@
             right: -7px;
             height: 52px;
             margin-left: 0;
-            background-color: $header-bg;
+            background-color: $hearder-top-bg;
             width: 243px;
             display: flex;
             align-items: center;
