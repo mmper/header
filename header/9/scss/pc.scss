@@ -88,6 +88,18 @@
               text-overflow: ellipsis;
               overflow-y: scroll;
               z-index: 999;
+              &::-webkit-scrollbar {
+                width:5px;
+                height:9px;
+              }
+              &::-webkit-scrollbar-thumb {
+                background-color:#ddd;
+                background-clip:padding-box;
+                min-height:28px;
+              }
+              &::-webkit-scrollbar-thumb:hover {
+                background-color:#bbb;
+              }
               a {
                 color: $primary-font-color;
               }
@@ -114,6 +126,14 @@
             justify-content: center;
             >a{
               font-size: 12px;
+              display: flex;
+              align-items: center;
+              .sline {
+                height: 8px;
+                width: 1px;
+                background:  $header-top-font-color;
+                margin: 0 4px;
+              }
             }
             &:hover{
               .login__downlist, .pull-down{
@@ -166,7 +186,7 @@
               .line{
                 width: 100%;
                 height: 1px;
-                background: $icon-border-color;
+                background: $separator-line-color;
                 margin: 3px 0;
               }
               &-item{
@@ -184,7 +204,7 @@
                   }
                   &.readonly{
                     &:hover{
-                      color: $iconfont-color;
+                      color: $header-top-font-color;
                       i{
                         border-color: $icon-border-color;
                       }
@@ -246,7 +266,15 @@
                 align-items: center;
                 justify-content: center;
                 background-color: $header-bg;
-                color: $hearder-menu-color;
+                color: $menu-font-color;
+                &:hover {
+                  i{
+                    color:$menu-font-hover-color;
+                  }
+                }
+                i {
+                  color:$menu-font-color;
+                }
                 &:focus{
                   border: 0;
                   outline: none;
@@ -303,6 +331,9 @@
             .submenu{
               display: block;
             }
+            >a {
+             color: $menu-font-hover-color;
+            }
           }
           >a {
             display: inline-block;
@@ -310,7 +341,7 @@
             width: 100%;
             text-align: center;
             @include ellipsis;
-            color: $hearder-menu-color;
+            color: $menu-font-color;
           }
           .submenu {
             display:none;
@@ -380,7 +411,7 @@
             display: flex;
           }
           i {
-            color: $hearder-menu-color;
+            color: $menu-font-color;
           }
         }
         .page-down {
