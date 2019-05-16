@@ -51,6 +51,7 @@ $(function () {
 		} else if (document.documentElement.clientWidth <= 768){ 
 			$('.main.mobile-main .main-body').css('padding','0');
 		}
+		$('.main1.pc-main .main-body').css('padding-top','64px');
 	}
 	function judgeMain() {
 		if (document.documentElement.clientWidth <= 768) {

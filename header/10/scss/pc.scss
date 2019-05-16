@@ -75,7 +75,7 @@
               z-index: 999;
               top: 48px;
               left: 0;
-              width: 3.9375rem;
+              width: 50px;
               padding: 10px 0;
               background: $hearder-top-bg;
               box-shadow: 1px 1px .9375rem 0 $shadow-color;
@@ -157,7 +157,7 @@
               z-index: 999;
               top: 48px;
               left: -1.2rem;
-              width: 8.5rem;
+              width: 100px;
               background: $hearder-top-bg;
               box-shadow: 1px -1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
@@ -241,6 +241,7 @@
           .cc {
             max-width: 200px;
             margin-bottom: 5px;
+            line-height: 20px;
             @include ellipsis;
             a {
               display: flex;

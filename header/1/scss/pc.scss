@@ -54,8 +54,6 @@
         .menu {
           flex:1;
           height: 100%;
-          max-width: 75%;
-          min-width: 65%;
           display: flex;
           flex-wrap: nowrap;
           align-items: center;
@@ -257,7 +255,7 @@
               top: 54px;
               left: 0;
               z-index: 999;
-              width: 3.9375rem;
+              width: 50px;
               padding: 10px 0;
               background:$header-bg;
               box-shadow: 1px 1px .9375rem 0 $shadow-color;
@@ -322,7 +320,7 @@
               position: absolute;
               top: 36px;
               right: -1.6rem;
-              width: 8.5rem;
+              width: 100px;
               z-index: 999;
               background:$header-bg;
               box-shadow: 1px -1px .9375rem 0 $shadow-color;

@@ -25,11 +25,9 @@ body{
   font-size: 10px;
 }
 .main {
-  overflow-y: scroll;
   &.pc-main{
     width: 100%; 
     position: relative;
-    padding-top: 64px;
   }
   &.mobile-main{
     padding: 0 0.625rem;
