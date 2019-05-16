@@ -24,8 +24,8 @@
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -webkit-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
-      background-color: $primary-header-bg;
-      box-shadow: 0px .3125rem .625rem $primary-shadow;
+      background-color: $header-bg;
+      box-shadow: 0px .3125rem .625rem $shadow-color;
       z-index: 5;
       width: 100%;
       a{
@@ -80,13 +80,25 @@
               width: 3.9375rem;
               padding: 10px 0;
               background: $hearder-top-bg;
-              box-shadow: 1px 1px .9375rem 0 $primary-shadow;
+              box-shadow: 1px 1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
               white-space: nowrap;
               overflow-x: hidden;
               text-overflow: ellipsis;
               overflow-y: scroll;
               z-index: 999;
+              &::-webkit-scrollbar {
+                width:5px;
+                height:9px;
+              }
+              &::-webkit-scrollbar-thumb {
+                background-color:#ddd;
+                background-clip:padding-box;
+                min-height:28px;
+              }
+              &::-webkit-scrollbar-thumb:hover {
+                background-color:#bbb;
+              }
               a {
                 color: $primary-font-color;
               }
@@ -95,7 +107,7 @@
                 text-align: center;
                 &:hover{
                   .lang-link{
-                    color: $active-font-color;
+                    color: $header-top-font-hover-color;
                   }
                 }
                 .lang-link{
@@ -113,6 +125,14 @@
             justify-content: center;
             >a{
               font-size: 12px;
+              display: flex;
+              align-items: center;
+              .sline {
+                height: 8px;
+                width: 1px;
+                background: $header-top-font-color;
+                margin: 0 4px;
+              }
             }
             &:hover{
               .login__downlist, .pull-down{
@@ -129,7 +149,7 @@
               border-width: 6px;
               border-color: $hearder-top-bg $hearder-top-bg transparent transparent;
               transform: rotate(-45deg);
-              box-shadow: 1px -1px .0925rem $primary-shadow;
+              box-shadow: 1px -1px .0925rem $shadow-color;
               z-index: 999;
             }
             .login__downlist{
@@ -139,7 +159,7 @@
               left: -1.2rem;
               width: 8.5rem;
               background: $hearder-top-bg;
-              box-shadow: 1px -1px .9375rem 0 $primary-shadow;
+              box-shadow: 1px -1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
               white-space: nowrap;
               overflow: hidden;
@@ -147,12 +167,12 @@
               padding: .625rem 15px;
               z-index: 999;
               a {
-                color: $primary-font-color;
+                color: $header-top-font-color;
               }
               .line{
                 width: 100%;
                 height: 1px;
-                background: $primary-icon-border-color;
+                background: $icon-border-color;
                 margin: 3px 0;
               }
               &-item{
@@ -163,23 +183,23 @@
                   display: flex;
                   align-items: center;
                   &:hover{
-                    color: $active-font-color;
+                    color: $header-top-font-hover-color;
                     i{
-                      border-color: $hover-icon-border-color;
+                      border-color: $icon-border-hover-color;
                     }
                   }
                   &.readonly{
                     &:hover{
                       color: $iconfont-color;
                       i{
-                        border-color: $primary-icon-border-color;
+                        border-color: $icon-border-color;
                       }
                     }
                   }
                   >i{
                     width: 22px;
                     height: 22px;
-                    border: 1px solid $primary-icon-border-color;
+                    border: 1px solid $icon-border-color;
                     border-radius: 11px;
                     margin-right: .3125rem;
                     display: block;
@@ -217,7 +237,7 @@
             &.contact {
               font-size: 16px;
               a {
-                color: $primary-header-bg;
+                color: $header-bg;
                 i {
                   padding-right: 3px;
                 }
@@ -241,8 +261,8 @@
       height: 64px;
       z-index: 1;
       width: 100%;
-      background: $primary-header-bg;
-      box-shadow: 0px .3125rem .625rem $primary-shadow;
+      background: $header-bg;
+      box-shadow: 0px .3125rem .625rem $shadow-color;
       font-size: 1.4rem;
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
@@ -294,8 +314,8 @@
             width: 9.75rem;
             background: $hearder-top-bg;
             border-radius:0 0 .25rem .25rem;
-            box-shadow:0 1.25rem 2.5rem .625rem $primary-shadow;
-            border-top: 1px solid $active-font-color;
+            box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
+            // border-top: 1px solid $hover-font-color;
             .e_li{
               position: relative;
               &:hover{    
@@ -310,9 +330,9 @@
                 width: 100%;
                 display: block;
                 @include ellipsis;
-                color: $primary-font-color;
+                color: $header-top-font-color;
                 &:hover{
-                  color: $active-font-color;
+                  color: $header-top-font-hover-color;
                 }
               }
               .thr{
@@ -324,8 +344,8 @@
                 width: 9.75rem;
                 background: $hearder-top-bg;
                 border-radius:0 0 .25rem .25rem;
-                box-shadow:0 1.25rem 2.5rem .625rem $primary-shadow;
-                border-top: 1px solid $active-font-color;
+                box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
+                border-top: 1px solid $header-top-font-hover-color;
                 a{
                   line-height: 50px;
                   height: 50px;
@@ -333,9 +353,9 @@
                   width: 100%;
                   display: block;
                   @include ellipsis;
-                  color: $primary-font-color;
+                  color: $header-top-font-color;
                   &:hover{
-                    color: $active-font-color;
+                    color: $header-top-font-hover-color;
                   }
                 }
               }
@@ -382,7 +402,7 @@
           .icon {
             width: 22px;
             height: 22px;
-            border: 1px  solid $primary-icon-border-color;
+            border: 1px  solid $icon-border-color;
             border-radius: 11px;
             margin-left: 1.125rem;
             text-align: center;
@@ -394,12 +414,12 @@
               color: $iconfont-color;
             }
             &:hover{
-              border-color: $active-icon-border-color;
-              color: $active-font-color;
+              border-color: $icon-border-hover-color;
+              color: $header-top-font-hover-color;
               >a{
-                color: $active-font-color;
+                color: $header-top-font-hover-color;
                 &:hover{
-                  color: $hover-font-color;
+                  color: $header-top-font-hover-color;
                 }
               }
             }
@@ -428,7 +448,7 @@
               display: flex;
               align-items: center;
               border-style: solid;
-              border-color: $primary-header-bg;
+              border-color: $header-bg;
               border-right-width: 12px;
               border-left-width: 12px;
               border-top-width: 8px;

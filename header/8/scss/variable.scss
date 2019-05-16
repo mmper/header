@@ -2,23 +2,61 @@
 // font
 $primary-font-color: #767881;
 
-$active-font-color: #e4493a;
+$hover-font-color: #e4493a;
 $hover-font-color: #e4493a;
 $thin-font-color: #A6A5A5;
 $iconfont-color: #a1a1a1;
 /************** pc ************/
 // header
-$primary-header-bg: #ffffff;
-$primary-shadow: rgba($color: #000000, $alpha: 0.09);
+$header-bg: #ffffff;
+$shadow-color: rgba($color: #000000, $alpha: 0.09);
 $logo-bg:#e4493a;
 
 // all icon(search、 login、 lang、 mail ....)
-$primary-icon-border-color: #bfbfbf;
-$active-icon-border-color: #e4493a;
-$hover-icon-border-color: #e4493a;
+$icon-border-color: #bfbfbf;
+$icon-border-hover-color: #e4493a;
+$icon-border-hover-color: #e4493a;
 
 
 $placeholder-color:#BFBFBF; /* input输入框placeholder颜色 */
 $search-border-color:#e4493a; /* 搜索边框颜色*/
 $nav-menu-top-line-color:#E8E8E8; /*nav列表顶部分割线颜色*/
 $separator-line-color:#eaeaea; // 分割线颜色
+
+
+
+
+
+
+
+
+
+
+// font-color
+$primary-font-color: #767881;  // 全局默认字体色
+$hover-font-color: #e4493a; // 默认hover字体色
+
+$menu-font-color:#FBDFDC; ; //导航栏字体色
+$menu-font-hover-color:#ffffff;; //导航栏字体hover色
+
+$header-top-font-color:#767881; //顶部字体色
+$header-top-font-hover-color:#e4493a; //顶部字体hover色
+
+$iconfont-color: #a1a1a1; // 图标字体色
+
+// bg-color
+$header-bg: #E4493A; // 头部整体背景色
+$hearder-top-bg:#ffffff; // 顶部背景色 不用
+
+// border-color
+$icon-border-color: #bfbfbf;
+$icon-border-hover-color: #e4493a;
+
+
+// shadow-color
+$shadow-color: rgba($color: #000000, $alpha: 0.09);
+
+// other
+$separator-line-color:#eaeaea; // 分割线颜色
+$placeholder-color:#BFBFBF; // input提示语颜色
+$nav-menu-top-line-color:#E8E8E8; //列表顶部分割线颜色

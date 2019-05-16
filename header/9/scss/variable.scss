@@ -1,21 +1,21 @@
 
 // font
 $primary-font-color: #767881;
-$active-font-color: #e4493a;
+$hover-font-color: #e4493a;
 $hover-font-color: #e4493a;
 $thin-font-color: #A6A5A5;
 $iconfont-color: #a1a1a1;
 /************** pc ************/
 // header
-$primary-header-bg: #E4493A;
-$primary-shadow: rgba($color: #000000, $alpha: 0.09);
+$header-bg: #E4493A;
+$shadow-color: rgba($color: #000000, $alpha: 0.09);
 $hearder-top-bg:#ffffff;
 $hearder-menu-color:#FBDFDC;
 
 // all icon(search、 login、 lang、 mail ....)
-$primary-icon-border-color: #bfbfbf;
-$active-icon-border-color: #e4493a;
-$hover-icon-border-color: #e4493a;
+$icon-border-color: #bfbfbf;
+$icon-border-hover-color: #e4493a;
+$icon-border-hover-color: #e4493a;
 $placeholder-color:#BFBFBF;
 $separator-line-color:#eaeaea; // 分割线颜色
 

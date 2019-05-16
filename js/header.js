@@ -160,3 +160,7 @@ $(function () {
 		}
 	})
 })
+
+$('.pc .lang__downlist').on('mousewheel',function(e){
+	e.stopPropagation() //阻止事件向上冒泡
+});
