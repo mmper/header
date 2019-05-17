@@ -19,7 +19,7 @@
   }
   .pc3 {
     .hearder {
-      color: $primary-font-color;
+      color: $top-font-color;
       font-size: 1.4rem;
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
@@ -29,7 +29,7 @@
       z-index: 5;
       width: 100%;
       a{
-        color: $primary-font-color;
+        color: $top-font-color;
       }
       .iconfont{
         font-size: 12px;
@@ -100,14 +100,14 @@
                 background-color:#bbb;
               }
               a {
-                color: $primary-font-color;
+                color: $top-font-color;
               }
               &-item{
                 line-height: 36px;
                 text-align: center;
                 &:hover{
                   .lang-link{
-                    color: $hover-font-color;
+                    color: $top-hover-font-color;
                   }
                 }
                 .lang-link{
@@ -130,7 +130,7 @@
               .sline {
                 height: 8px;
                 width: 1px;
-                background: $primary-font-color;
+                background: $top-font-color;
                 margin: 0 4px;
               }
             }
@@ -167,7 +167,7 @@
               padding: .625rem 15px;
               z-index: 999;
               a {
-                color: $primary-font-color;
+                color: $top-font-color;
               }
               .line{
                 width: 100%;
@@ -183,14 +183,14 @@
                   display: flex;
                   align-items: center;
                   &:hover{
-                    color: $hover-font-color;
+                    color: $top-hover-font-color;
                     i{
                       border-color: $icon-border-hover-color;
                     }
                   }
                   &.readonly{
                     &:hover{
-                      color: $primary-font-color;
+                      color: $top-font-color;
                       i{
                         border-color: $icon-border-color;
                       }
@@ -319,7 +319,7 @@
             background: $hearder-top-bg;
             border-radius:0 0 .25rem .25rem;
             box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-            // border-top: 1px solid $hover-font-color;
+            // border-top: 1px solid $top-hover-font-color;
             .e_li{
               position: relative;
               &:hover{    
@@ -334,9 +334,9 @@
                 width: 100%;
                 display: block;
                 @include ellipsis;
-                color: $primary-font-color;
+                color: $top-font-color;
                 &:hover{
-                  color: $hover-font-color;
+                  color: $top-hover-font-color;
                 }
               }
               .thr{
@@ -349,7 +349,7 @@
                 background: $hearder-top-bg;
                 border-radius:0 0 .25rem .25rem;
                 box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-                border-top: 1px solid $hover-font-color;
+                border-top: 1px solid $top-hover-font-color;
                 a{
                   line-height: 50px;
                   height: 50px;
@@ -357,9 +357,9 @@
                   width: 100%;
                   display: block;
                   @include ellipsis;
-                  color: $primary-font-color;
+                  color: $top-font-color;
                   &:hover{
-                    color: $hover-font-color;
+                    color: $top-hover-font-color;
                   }
                 }
               }
@@ -419,11 +419,11 @@
             }
             &:hover{
               border-color: $icon-border-hover-color;
-              color: $hover-font-color;
+              color: $top-hover-font-color;
               >a{
-                color: $hover-font-color;
+                color: $top-hover-font-color;
                 &:hover{
-                  color: $hover-font-color;
+                  color: $top-hover-font-color;
                 }
               }
             }

@@ -19,16 +19,16 @@
   }
   .pc7 {
     .hearder {
-      color: $primary-font-color;
+      color: $top-font-color;
       font-size: 1.4rem;
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -webkit-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
-      background-color: $header-bg;
+      background-color: $menu-bg;
       box-shadow: 0px .3125rem .625rem $shadow-color;
       width: 100%;
       a{
-        color: $primary-font-color;
+        color: $top-font-color;
       }
       .iconfont{
         font-size: 12px;
@@ -49,7 +49,7 @@
         justify-content: space-between;
         align-items: center;
         a {
-          color: $header-top-font-color;
+          color: $top-font-color;
         }
         .left {
           display: flex;
@@ -65,7 +65,7 @@
             height: 48px;
             min-width: 3rem;
             .icon-xiala {
-              color: $header-top-font-color;
+              color: $top-font-color;
             }
             &:hover{
               .lang__downlist{
@@ -83,7 +83,7 @@
               left: 0;
               width: 50px;
               padding: 10px 0;
-              background:$header-bg;
+              background:$menu-bg;
               box-shadow: 1px 1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
               white-space: nowrap;
@@ -104,14 +104,14 @@
                 background-color:#bbb;
               }
               a {
-                color: $primary-font-color;
+                color: $top-font-color;
               }
               &-item{
                 line-height: 36px;
                 text-align: center;
                 &:hover{
                   .lang-link{
-                    color: $hover-font-color;
+                    color: $top-hover-font-color;
                   }
                 }
                 .lang-link{
@@ -134,7 +134,7 @@
               .sline {
                 height: 8px;
                 width: 1px;
-                background:  $header-top-font-color;
+                background:  $top-font-color;
                 margin: 0 4px;
               }
             }
@@ -151,7 +151,7 @@
               height: 0px;
               border-style: solid;
               border-width: 6px;
-              border-color: $header-bg $header-bg transparent transparent;
+              border-color: $menu-bg $menu-bg transparent transparent;
               transform: rotate(-45deg);
               box-shadow: 1px -1px .0925rem $shadow-color;
               z-index: 1000;
@@ -162,7 +162,7 @@
               top: 48px;
               left: -1.2rem;
               width: 100px;
-              background:$header-bg;
+              background:$menu-bg;
               box-shadow: 1px -1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
               white-space: nowrap;
@@ -184,7 +184,7 @@
                 background-color:#bbb;
               }
               a {
-                color: $primary-font-color;
+                color: $top-font-color;
               }
               .line{
                 width: 100%;
@@ -200,7 +200,7 @@
                   display: flex;
                   align-items: center;
                   &:hover{
-                    color: $hover-font-color;
+                    color: $top-hover-font-color;
                     i{
                       border-color: $icon-border-hover-color;
                     }
@@ -243,7 +243,7 @@
               i {
                 padding-right: 3px;
                 font-size: 14px;
-                color:$header-top-font-color;
+                color:$top-font-color;
                 &.icon-dianhua1 {
                   font-size: 12px;
                 }
@@ -262,7 +262,7 @@
       width: 100%;
       height: 64px;
       z-index: 1;
-      background-color: $header-bg;
+      background-color: $menu-bg;
       font-size: 1.4rem;
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
@@ -314,14 +314,14 @@
             width: 100%;
             text-align: center;
             @include ellipsis;
-            color: $primary-font-color;
+            color: $menu-font-color;
             &:hover{
-              color: $hover-font-color;
+              color: $menu-font-hover-color;
             }
           }
           &.active {
             >a {
-              color: $hover-font-color;
+              color: $menu-font-hover-color;
             }
           }
           .submenu {
@@ -331,10 +331,10 @@
             top: 65px;
             left:0;
             width: 9.75rem;
-            background: $header-bg;
+            background: $menu-bg;
             border-radius:0 0 .25rem .25rem;
             box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-            border-top: 1px solid $hover-font-color;
+            border-top: 1px solid $menu-font-hover-color;
             .e_li{
               position: relative;
               &:hover{
@@ -349,9 +349,9 @@
                 width: 100%;
                 display: block;
                 @include ellipsis;
-                color: $primary-font-color;
+                color: $menu-font-color;
                 &:hover{
-                  color: $hover-font-color;
+                  color: $menu-font-hover-color;
                 }
               }
               .thr{
@@ -361,10 +361,10 @@
                 top: -1px;
                 right: -9.75rem;
                 width: 9.75rem;
-                background: $header-bg;
+                background: $menu-bg;
                 border-radius:0 0 .25rem .25rem;
                 box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-                border-top: 1px solid $hover-font-color;
+                border-top: 1px solid $menu-font-hover-color;
                 a{
                   line-height: 50px;
                   height: 50px;
@@ -372,9 +372,9 @@
                   width: 100%;
                   display: block;
                   @include ellipsis;
-                  color: $primary-font-color;
+                  color: $menu-font-color;
                   &:hover{
-                    color: $hover-font-color;
+                    color: $menu-font-hover-color;
                   }
                 }
               }
@@ -386,7 +386,7 @@
           line-height: 64px;
           padding-right: 15px;
           a{
-            color: $primary-font-color;
+            color: $menu-font-color;
           }
         }
         .page-down {
@@ -420,11 +420,11 @@
           }
           &:hover{
             border-color: $icon-border-hover-color;
-            color: $hover-font-color;
+            color: $top-hover-font-color;
             >a{
-              color: $hover-font-color;
+              color: $top-hover-font-color;
               &:hover{
-                color: $hover-font-color;
+                color: $top-hover-font-color;
               }
             }
           }
@@ -445,7 +445,7 @@
             top: 0;
             left: 0;
             height: 64px;
-            background-color: $header-bg;
+            background-color: $menu-bg;
             width: 100%;
             display: none;
             z-index: 1;
@@ -471,7 +471,7 @@
                 }
                 &:hover{
                   i {
-                    color: $hover-font-color;
+                    color: $top-hover-font-color;
                   }
                 }
                 i {

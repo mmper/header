@@ -19,7 +19,7 @@
   }
   .pc1 {
     .hearder {
-      color: $primary-font-color;
+      color: $menu-font-color;
       font-size: 1.4rem;
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
@@ -32,7 +32,7 @@
       left: 0px;
       width: 100%;
       a{
-        color: $primary-font-color;
+        color: $menu-font-color;
       }
       .iconfont{
         font-size: 12px;
@@ -101,13 +101,13 @@
               background: $menu-bg;
               border-radius:0 0 .25rem .25rem;
               box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-              border-top: 1px solid $hover-font-color;
+              border-top: 1px solid $menu-font-hover-color;
               z-index: 999;
               .e_li{
                 position: relative;
                 &:hover{
                   >a {
-                    color: $hover-font-color;
+                    color: $menu-font-hover-color;
                   }
                   .thr{
                     display: block;
@@ -130,11 +130,11 @@
                   background: $menu-bg;
                   border-radius:0 0 .25rem .25rem;
                   box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-                  border-top: 1px solid $hover-font-color;
+                  border-top: 1px solid $menu-font-hover-color;
                   z-index: 999;
                   li:hover{
                     a {
-                      color: $hover-font-color;
+                      color: $menu-font-hover-color;
                     }
                   }
                   a{
@@ -183,15 +183,15 @@
             }
             &:hover{
               border-color: $icon-border-hover-color;
-              color: $hover-font-color;
+              color: $menu-font-hover-color;
               >a{
-                color: $hover-font-color;
+                color: $menu-font-hover-color;
                 &:hover{
-                  color: $hover-font-color;
+                  color: $menu-font-hover-color;
                 }
               }
               >i.icon-sousuo {
-                color:$hover-font-color;
+                color:$menu-font-hover-color;
               }
             }
           }
@@ -243,7 +243,7 @@
                 }
                 &:hover{
                   i {
-                    color: $hover-font-color;
+                    color: $menu-font-hover-color;
                   }
                 }
               } 
@@ -293,7 +293,7 @@
                 text-align: center;
                 &:hover{
                   .lang-link{
-                    color: $hover-font-color;
+                    color: $menu-font-hover-color;
                   }
                 }
                 .lang-link{
@@ -353,15 +353,16 @@
                   text-align: left;
                   display: flex;
                   align-items: center;
+                  color:$menu-font-color;
                   &:hover{
-                    color: $hover-font-color;
+                    color: $menu-font-hover-color;
                     i{
                       border-color: $icon-border-hover-color;
                     }
                   }
                   &.readonly{
                     &:hover{
-                      color: $iconfont-color;
+                      color: $menu-font-color;
                       i{
                         border-color: $icon-border-color;
                       }

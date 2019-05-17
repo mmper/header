@@ -19,13 +19,13 @@
   }
   .pc2 {
     a{
-      color: $primary-font-color;
+      color: $top-font-color;
     }
     .iconfont{
       font-size: 14px;
     }
     .hearder {
-      color: $primary-font-color;
+      color: $top-font-color;
       font-size: 1.4rem;
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
@@ -40,7 +40,7 @@
         display: flex;
         flex-direction: column;
         background: $hearder-top-bg;
-        color: $header-top-font-color;
+        color: $top-font-color;
         .logo {
           display: flex;
           justify-content: center;
@@ -83,11 +83,11 @@
               }
               &:hover{
                 border-color: $icon-border-hover-color;
-                color: $hover-font-color;
+                color: $top-hover-font-color;
                 >a{
-                  color: $hover-font-color;
+                  color: $top-hover-font-color;
                   &:hover{
-                    color: $hover-font-color;
+                    color: $top-hover-font-color;
                   }
                 }
               }
@@ -100,17 +100,20 @@
               display: flex;
               align-items: center;
               height: 64px;
+              .icon-xiala {
+                color: $iconfont-color;
+              }
               &:hover{
                 .login__downlist, .pull-down{
                   display: block;
                 }
                 .icon-xiala {
-                  color: $hover-font-color;
+                  color: $top-hover-font-color;
                 }
                 .login{
                   border-color: $icon-border-hover-color;
                   >a{
-                    color: $hover-font-color;
+                    color: $top-hover-font-color;
                   }
                 }
               }
@@ -164,15 +167,16 @@
                     text-align: left;
                     display: flex;
                     align-items: center;
+                    color: $top-font-color;
                     &:hover{
-                      color: $hover-font-color;
+                      color: $top-hover-font-color;
                       i{
                         border-color: $icon-border-hover-color;
                       }
                     }
                     &.readonly{
                       &:hover{
-                        color: $iconfont-color;
+                        color: $top-font-color;
                         i{
                           border-color: $icon-border-color;
                         }
@@ -203,6 +207,9 @@
             }
             .search{
               position: relative;
+              >i{
+                color: $iconfont-color;
+              }
               .search_input {
                 position: absolute;
                 z-index: 999;
@@ -247,7 +254,7 @@
                   }
                   &:hover{
                     i {
-                      color: $hover-font-color;
+                      color: $top-hover-font-color;
                     }
                   }
                 } 
@@ -262,11 +269,15 @@
                   display: block;
                 }
                 .icon-xiala, .lang-contant{
-                  color: $hover-font-color;
+                  color: $top-hover-font-color;
                 } 
               }
               .lang {
                 display: flex;
+                color: $iconfont-color;
+                >a {
+                  color: $iconfont-color;
+                }
               }
               .lang-contant {
                 font-size: 12px;
@@ -307,7 +318,7 @@
                   text-align: center;
                   &:hover{
                     .lang-link{
-                      color: $hover-font-color;
+                      color: $top-hover-font-color;
                     }
                   }
                   .lang-link{
@@ -443,6 +454,11 @@
       .page-up{
         display: none;
         @include transform(rotate(-180deg));
+      }
+      .page-up,.page-down {
+        i {
+          color: $menu-font-color;
+        } 
       }
     }
   }
