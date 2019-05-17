@@ -293,6 +293,8 @@
           min-width: calc((100% - 60px)/10);
           min-width: -moz-calc((100% - 60px)/10);
           min-width: -webkit-calc((100% - 60px)/10);
+          display: flex;
+          align-items: center;
           &.hide{
             display: none;
           }

@@ -235,6 +235,7 @@
           .cc {
             margin-left: 1.5rem;
             max-width: 200px;
+            line-height: 30px;
             @include ellipsis;
             a {
               display: flex;
@@ -297,6 +298,8 @@
           min-width: calc((100% - 30px)/8);
           min-width: -moz-calc((100%- 30px)/8);
           min-width: -webkit-calc((100% - 30px)/8);
+          display: flex;
+          align-items: center;
           &.hide{
             display: none;
           }

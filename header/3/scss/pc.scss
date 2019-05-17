@@ -233,9 +233,11 @@
           .cc {
             max-width: 200px;
             margin-bottom: 5px;
+            line-height: 20px;
             @include ellipsis;
             &.contact {
               font-size: 16px;
+              line-height: 30px;
               a {
                 color: $header-bg;
                 i {
@@ -286,6 +288,8 @@
           min-width: calc((100% - 60px)/10);
           min-width: -moz-calc((100% - 60px)/10);
           min-width: -webkit-calc((100% - 60px)/10);
+          display: flex;
+          align-items: center;
           &.hide{
             display: none;
           }
