@@ -30,7 +30,7 @@
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -webkit-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
-      background-color: $header-bg;
+      background-color: $menu-bg;
       z-index: 5;
       width: 100%;
       &__container{
@@ -40,6 +40,7 @@
         display: flex;
         flex-direction: column;
         background: $hearder-top-bg;
+        color: $header-top-font-color;
         .logo {
           display: flex;
           justify-content: center;
@@ -74,7 +75,10 @@
               align-items: center;
               justify-content: center;
               cursor: pointer;
-              a{
+              >a{
+                color: $iconfont-color;
+              }
+              >i {
                 color: $iconfont-color;
               }
               &:hover{
@@ -128,7 +132,7 @@
                 height: 0px;
                 border-style: solid;
                 border-width: 6px;
-                border-color: $header-bg $header-bg transparent transparent;
+                border-color: $menu-bg $menu-bg transparent transparent;
                 transform: rotate(-45deg);
                 box-shadow: 1px -1px .0925rem $shadow-color;
                 z-index: 1000;
@@ -140,7 +144,7 @@
                 top: 36px;
                 left: -1.6rem;
                 width: 100px;
-                background:$header-bg;
+                background:$menu-bg;
                 box-shadow: 1px -1px .9375rem 0 $shadow-color;
                 border-radius: .25rem;
                 white-space: nowrap;
@@ -207,13 +211,14 @@
                 right: 0;
                 height: 20px;
                 margin-left: 0;
-                background-color: $header-bg;
+                background-color: $hearder-top-bg;
                 width: 12.625rem;
                 display: flex;
                 align-items: center;
                 border-bottom: 1px  solid $icon-border-color;
                 display: none;
                 .input{
+                  background-color: $hearder-top-bg;
                   outline: none;
                   border: none;
                   line-height: 100%;
@@ -278,7 +283,7 @@
                 right: 0;
                 width: 50px;
                 padding: 10px 0;
-                background:$header-bg;
+                background:$menu-bg;
                 box-shadow: 1px 1px .9375rem 0 $shadow-color;
                 border-radius: .25rem;
                 white-space: nowrap;
@@ -319,7 +324,7 @@
       height: 64px;
       z-index: 1000;
       width: 100%;
-      background: $header-bg;
+      background: $menu-bg;
       font-size: 1.4rem;
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
@@ -363,14 +368,14 @@
           width: 100%;
           text-align: center;
           @include ellipsis;
-          color: $header-top-font-color;
+          color: $menu-font-color;
           &:hover{
-            color: $hover-font-color;
+            color: $menu-font-hover-color;
           }
         }
         &.active {
           >a {
-            color: $hover-font-color;
+            color: $menu-font-hover-color;
           }
         }
         .submenu {
@@ -380,15 +385,15 @@
           top: 65px;
           left:0;
           width: 9.75rem;
-          background: $header-bg;
+          background: $menu-bg;
           border-radius:0 0 .25rem .25rem;
           box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-          border-top: 1px solid $hover-font-color;
+          border-top: 1px solid $menu-font-hover-color;
           .e_li{
             position: relative;
             &:hover{
               >a {
-                color: $hover-font-color;
+                color: $menu-font-hover-color;
               }
               .thr{
                 display: block;
@@ -401,7 +406,7 @@
               width: 100%;
               display: block;
               @include ellipsis;
-              color: $primary-font-color;
+              color: $menu-font-color;
             }
             .thr{
               display: none;
@@ -410,13 +415,13 @@
               z-index: 999;
               right: -9.75rem;
               width: 9.75rem;
-              background: $header-bg;
+              background: $menu-bg;
               border-radius:0 0 .25rem .25rem;
               box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-              border-top: 1px solid $hover-font-color;
+              border-top: 1px solid $menu-font-hover-color;
               li:hover{
                 a {
-                  color: $hover-font-color;
+                  color: $menu-font-hover-color;
                 }
               }
               a{
@@ -426,7 +431,7 @@
                 width: 100%;
                 display: block;
                 @include ellipsis;
-                color: $primary-font-color;
+                color: $menu-font-color;
               }
             }
           }

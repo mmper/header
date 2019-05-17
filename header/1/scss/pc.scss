@@ -24,7 +24,7 @@
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -webkit-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
-      background-color: $header-bg;
+      background-color: $menu-bg;
       box-shadow: 0px .3125rem .625rem $shadow-color;
       position: fixed;
       z-index: 5;
@@ -82,14 +82,14 @@
               width: 100%;
               text-align: center;
               @include ellipsis;
-              color: $primary-font-color;
+              color: $menu-font-color;
               &:hover{
-                color: $hover-font-color;
+                color: $menu-font-hover-color
               }
             }
             &.active {
               >a {
-                color: $hover-font-color;
+                color: $menu-font-hover-color
               }
             }
             .submenu {
@@ -98,7 +98,7 @@
               top: 65px;
               left:0;
               width: 9.75rem;
-              background: $header-bg;
+              background: $menu-bg;
               border-radius:0 0 .25rem .25rem;
               box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
               border-top: 1px solid $hover-font-color;
@@ -127,7 +127,7 @@
                   top: -1px;
                   right: -9.75rem;
                   width: 9.75rem;
-                  background: $header-bg;
+                  background: $menu-bg;
                   border-radius:0 0 .25rem .25rem;
                   box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
                   border-top: 1px solid $hover-font-color;
@@ -175,8 +175,11 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            a{
+            >a{
               color: $iconfont-color;
+            }
+            >i.icon-sousuo {
+              color:$iconfont-color;
             }
             &:hover{
               border-color: $icon-border-hover-color;
@@ -186,6 +189,9 @@
                 &:hover{
                   color: $hover-font-color;
                 }
+              }
+              >i.icon-sousuo {
+                color:$hover-font-color;
               }
             }
           }
@@ -199,7 +205,7 @@
               z-index: 999;
               height: 22px;
               margin-left: 0;
-              background-color: $header-bg;
+              background-color: $menu-bg;
               width: 8.75rem;
               display: flex;
               align-items: center;
@@ -232,6 +238,9 @@
                   outline: none;
                   background:transparent;
                 }
+                i {
+                  color:$iconfont-color;
+                }
                 &:hover{
                   i {
                     color: $hover-font-color;
@@ -259,7 +268,7 @@
               z-index: 999;
               width: 50px;
               padding: 10px 0;
-              background:$header-bg;
+              background:$menu-bg;
               box-shadow: 1px 1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
               white-space: nowrap;
@@ -312,7 +321,7 @@
               height: 0px;
               border-style: solid;
               border-width: 6px;
-              border-color: $header-bg $header-bg transparent transparent;
+              border-color: $menu-bg $menu-bg transparent transparent;
               transform: rotate(-45deg);
               box-shadow: 1px -1px .0925rem $shadow-color;
               z-index: 1000;
@@ -324,7 +333,7 @@
               right: -1.6rem;
               width: 100px;
               z-index: 999;
-              background:$header-bg;
+              background:$menu-bg;
               box-shadow: 1px -1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
               white-space: nowrap;

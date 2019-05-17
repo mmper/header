@@ -24,7 +24,7 @@
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -webkit-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
-      background-color: $header-bg;
+      background-color: $menu-bg;
       box-shadow: 0px .3125rem .625rem $shadow-color;
       z-index: 5;
       width: 100%;
@@ -107,7 +107,7 @@
                 text-align: center;
                 &:hover{
                   .lang-link{
-                    color: $header-top-font-hover-color;
+                    color: $hover-font-color;
                   }
                 }
                 .lang-link{
@@ -130,7 +130,7 @@
               .sline {
                 height: 8px;
                 width: 1px;
-                background: $header-top-font-color;
+                background: $primary-font-color;
                 margin: 0 4px;
               }
             }
@@ -167,12 +167,12 @@
               padding: .625rem 15px;
               z-index: 999;
               a {
-                color: $header-top-font-color;
+                color: $primary-font-color;
               }
               .line{
                 width: 100%;
                 height: 1px;
-                background: $icon-border-color;
+                background: $separator-line-color;
                 margin: 3px 0;
               }
               &-item{
@@ -183,14 +183,14 @@
                   display: flex;
                   align-items: center;
                   &:hover{
-                    color: $header-top-font-hover-color;
+                    color: $hover-font-color;
                     i{
                       border-color: $icon-border-hover-color;
                     }
                   }
                   &.readonly{
                     &:hover{
-                      color: $iconfont-color;
+                      color: $primary-font-color;
                       i{
                         border-color: $icon-border-color;
                       }
@@ -239,7 +239,7 @@
               font-size: 16px;
               line-height: 30px;
               a {
-                color: $header-bg;
+                color: $menu-bg;
                 i {
                   padding-right: 3px;
                 }
@@ -263,7 +263,7 @@
       height: 64px;
       z-index: 1;
       width: 100%;
-      background: $header-bg;
+      background: $menu-bg;
       box-shadow: 0px .3125rem .625rem $shadow-color;
       font-size: 1.4rem;
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
@@ -334,9 +334,9 @@
                 width: 100%;
                 display: block;
                 @include ellipsis;
-                color: $header-top-font-color;
+                color: $primary-font-color;
                 &:hover{
-                  color: $header-top-font-hover-color;
+                  color: $hover-font-color;
                 }
               }
               .thr{
@@ -349,7 +349,7 @@
                 background: $hearder-top-bg;
                 border-radius:0 0 .25rem .25rem;
                 box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-                border-top: 1px solid $header-top-font-hover-color;
+                border-top: 1px solid $hover-font-color;
                 a{
                   line-height: 50px;
                   height: 50px;
@@ -357,9 +357,9 @@
                   width: 100%;
                   display: block;
                   @include ellipsis;
-                  color: $header-top-font-color;
+                  color: $primary-font-color;
                   &:hover{
-                    color: $header-top-font-hover-color;
+                    color: $hover-font-color;
                   }
                 }
               }
@@ -419,11 +419,11 @@
             }
             &:hover{
               border-color: $icon-border-hover-color;
-              color: $header-top-font-hover-color;
+              color: $hover-font-color;
               >a{
-                color: $header-top-font-hover-color;
+                color: $hover-font-color;
                 &:hover{
-                  color: $header-top-font-hover-color;
+                  color: $hover-font-color;
                 }
               }
             }
@@ -452,7 +452,7 @@
               display: flex;
               align-items: center;
               border-style: solid;
-              border-color: $header-bg;
+              border-color: $menu-bg;
               border-right-width: 12px;
               border-left-width: 12px;
               border-top-width: 8px;
