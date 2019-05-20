@@ -39,7 +39,7 @@ $(function () {
 	}
 	
 	function containerMargin() {
-		var designWidth =  windows.innerWidth ? windows.innerWidth : document.body.clientWidth;
+		var designWidth =  window.innerWidth ? window.innerWidth : document.body.clientWidth;
 		if (designWidth <= 1200 && designWidth > 768) {
 			$('.pc .hearder__container').css('margin','0 25px');
 			$('.pc .subMenu').css('padding','0 25px');
@@ -56,7 +56,7 @@ $(function () {
 		$('.main1.pc-main .main-body').css('padding-top','64px');
 	}
 	function judgeMain() {
-		var designWidth =  windows.innerWidth ? windows.innerWidth : document.body.clientWidth;
+		var designWidth =  window.innerWidth ? window.innerWidth : document.body.clientWidth;
 		if (designWidth <= 768) {
 			$('.main').addClass('mobile-main');
 			$('.main').removeClass('pc-main');
