@@ -207,6 +207,11 @@
             }
             .search{
               position: relative;
+              &:hover {
+                >i{
+                  color: $top-hover-font-color;
+                }
+              }
               >i{
                 color: $iconfont-color;
               }
@@ -354,7 +359,7 @@
       align-items: center;
       justify-content:center;
       width: 100%;
-      box-shadow: 0px .3125rem .625rem -.3125rem $shadow-color;
+      box-shadow: 0px .3125rem 0 -.3125rem $shadow-color;
       &-item {
         padding: 0 .5rem;
         position: relative;
@@ -456,6 +461,15 @@
         @include transform(rotate(-180deg));
       }
       .page-up,.page-down {
+        height: 64px;
+        line-height: 64px;
+        width: 30px;
+        a {
+          height: 64px;
+          line-height: 64px;
+          width: 30px;
+          display: flex;
+        }
         i {
           color: $menu-font-color;
         }

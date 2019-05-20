@@ -68,6 +68,9 @@
               .lang__downlist{
                 display: block;
               }
+              .lang-contant, .icon-xiala{
+                color: $top-hover-font-color;
+              }
             }
             .lang-contant {
               font-size: 12px;
@@ -138,6 +141,12 @@
             &:hover{
               .login__downlist, .pull-down{
                 display: block;
+              }
+              a {
+                color: $top-hover-font-color;
+                .sline {
+                  background: $top-hover-font-color;
+                }
               }
             }
             .pull-down{
