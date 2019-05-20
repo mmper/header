@@ -114,11 +114,12 @@
                 text-align: center;
                 &:hover{
                   .lang-link{
-                    color: $top-hover-font-color;
+                    color: $menu-font-hover-color;
                   }
                 }
                 .lang-link{
                   text-align: center;
+                  color: $menu-font-color;
                 }
               }     
             }
@@ -208,13 +209,15 @@
                   text-align: left;
                   display: flex;
                   align-items: center;
+                  color: $menu-font-color;
                   &:hover{
-                    color: $top-hover-font-color;
+                    color: $menu-font-hover-color;
                     i{
                       border-color: $icon-border-hover-color;
                     }
                   }
                   &.readonly{
+                    color: $iconfont-color;
                     &:hover{
                       color: $iconfont-color;
                       i{
@@ -276,6 +279,7 @@
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -webkit-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
+      box-shadow: 0px .3125rem .625rem $shadow-color;
       .logo {
         max-width: 200px;
         height: 40px;
@@ -453,6 +457,11 @@
             height: 15px;
             width: 1px;
             background: $separator-line-color;
+          }
+          &:hover{
+            >i{
+              color: $menu-font-hover-color;
+            }
           }
           .search_input {
             position: absolute;

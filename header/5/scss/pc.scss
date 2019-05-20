@@ -325,13 +325,13 @@
             display:none;
             position: absolute;
             z-index: 999;
-            top: 65px;
+            top: 63px;
             left:0;
             width: 9.75rem;
             background: $hearder-top-bg;
             border-radius:0 0 .25rem .25rem;
             box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-            border-top: 1px solid $separator-line-color;
+            border-top: 1px solid $top-hover-font-color;
             .e_li{
               position: relative;
               &:hover{
@@ -346,9 +346,9 @@
                 width: 100%;
                 display: block;
                 @include ellipsis;
-                color: $menu-font-color;
+                color: $top-font-color;
                 &:hover{
-                  color: $menu-font-hover-color;
+                  color: $top-hover-font-color;
                 }
               }
               .thr{
@@ -361,7 +361,7 @@
                 background: $hearder-top-bg;
                 border-radius:0 0 .25rem .25rem;
                 box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
-                border-top: 1px solid $menu-font-hover-color;
+                border-top: 1px solid $top-hover-font-color;
                 a{
                   line-height: 50px;
                   height: 50px;
@@ -369,9 +369,9 @@
                   width: 100%;
                   display: block;
                   @include ellipsis;
-                  color: $menu-font-color;
+                  color: $top-font-color;
                   &:hover{
-                    color: $menu-font-hover-color;
+                    color: $top-hover-font-color;
                   }
                 }
               }

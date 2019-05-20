@@ -281,7 +281,8 @@
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -webkit-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
-       &.search-open{
+      box-shadow: 0px .3125rem .625rem $shadow-color;
+      &.search-open{
         background-color: $hearder-top-bg;
       }
       .menu {
@@ -463,6 +464,11 @@
           @include flex-pack-end();
           >i {
             color: $menu-font-color;
+          }
+          &:hover {
+            >i {
+              color: $menu-font-hover-color;
+            }
           }
           .search_input {
             position: absolute;
