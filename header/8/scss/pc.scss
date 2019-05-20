@@ -360,6 +360,11 @@
           a{
             color: $menu-font-color;
           }
+          &:hover{
+            i {
+              color: $menu-font-hover-color;
+            }
+          }
         }
         .page-down {
           display: none;

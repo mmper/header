@@ -149,6 +149,16 @@
               }
             }
           }
+          .page-down, .page-up {
+            &:hover{
+              i {
+                color: $menu-font-hover-color;
+              }
+            }
+            i {
+              color: $menu-font-color;
+            }
+          }
           .page-down {
             display: none;
           }

@@ -389,12 +389,17 @@
             }
           }
         }
-        .page-down,  .page-up{ 
+        .page-down, .page-up{ 
           height: 64px;
           line-height: 64px;
           padding-right: 15px;
           a {
             color: $menu-font-color;
+          }
+          &:hover{
+            i {
+              color: $menu-font-hover-color;
+            }
           }
         }
         .page-down {

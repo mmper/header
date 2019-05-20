@@ -382,11 +382,11 @@
           height: 64px;
           line-height: 64px;
           width: 30px;
-          // &:hover {
-          //   i {
-          //     color:$top-hover-font-color;
-          //   }
-          // }
+          &:hover{
+            i {
+              color: $menu-font-hover-color;
+            }
+          }
           a {
             height: 64px;
             line-height: 64px;

@@ -382,6 +382,11 @@
             // display: flex;
             @include flex();
           }
+          &:hover{
+            i {
+              color: $menu-font-hover-color;
+            }
+          }
           i {
             color: $menu-font-color;
           }

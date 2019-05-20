@@ -376,11 +376,13 @@
             width: 30px;
             display: flex;
           }
+          &:hover{
+            i {
+              color: $menu-font-hover-color;
+            }
+          }
           i {
             color: $menu-font-color;
-            &:hover {
-              color:$menu-font-hover-color;
-            }
           }
         }
         .page-down {
