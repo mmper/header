@@ -5,14 +5,20 @@ $(function () {
 		judgeMain();
 		containerMargin();
 	}
-	window.onresize= function(){
+	$(window).resize(function() {
 		adjustNavSizePc();
 		judgeMain();
 		containerMargin();
-	}
+	})
+	// window.onresize= function(){
+	// 	adjustNavSizePc();
+	// 	judgeMain();
+	// 	containerMargin();
+	// }
 	function adjustNavSizePc() {
-		let navSize = $(".pc .hearder__container").outerWidth();
-		if (navSize > 768) {
+		// let navSize = $(".pc .hearder__container").outerWidth();
+		var designWidth =  window.innerWidth ? window.innerWidth : document.body.clientWidth;
+		if (designWidth > 768) {
 			var menu_itemlength = $(".pc .menu .menu-item").length;
 			var menu_item = $(".pc .menu .menu-item")
 			var itemLength = $('#wrapper').data('item-length');
