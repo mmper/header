@@ -38,13 +38,13 @@
         // align-items: center;
         @include flex();
         @include flex-pack-justify();
-        @include  flex-align-center();
+        @include flex-align-center();
         .right {
           // display: flex;
           // align-items: center;
           // justify-content: flex-end;
           @include flex();
-          @include  flex-align-center();
+          @include flex-align-center();
           @include flex-pack-end();
           .box{
             margin-left: 1.5rem;
@@ -264,9 +264,7 @@
                 }
               }
               span {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                @include ellipsis;
               }
             }
           }
@@ -413,7 +411,7 @@
           @include transform(rotate(-180deg));
           a {
             // justify-content: flex-end;
-            @include flex-pack-end()
+            @include flex-pack-end();
           }
         }
       }

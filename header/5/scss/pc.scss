@@ -1,11 +1,6 @@
 @import './variable.scss';
+@import '../../../scss/mixin/index.scss';
 
-
-@mixin ellipsis() {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 @mixin transform($in) {
   transform: $in;
   -webkit-transform: $in;
@@ -45,21 +40,21 @@
         margin: 0 auto;
         height: 128px;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex();
+        @include flex-pack-justify();
+        @include flex-align-center();
         .left {
           width: 25%;
-          display: flex;
-          align-items: center;
+          @include flex();
+          @include flex-align-center();
           .box{
             margin-right: 1.5rem;
           }
           .lang{
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             height: 48px;
             min-width: 3rem;
             
@@ -86,9 +81,7 @@
               background: $hearder-top-bg;
               box-shadow: 1px 1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow-x: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
               overflow-y: scroll;
               &::-webkit-scrollbar {
                 width:5px;
@@ -123,13 +116,13 @@
             position: relative;
             height: 48px;
             min-width: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             >a{
               font-size: 12px;
-              display: flex;
-              align-items: center;
+              @include flex();
+              @include flex-align-center();
               .sline {
                 height: 8px;
                 width: 1px;
@@ -170,9 +163,7 @@
               background: $hearder-top-bg;
               box-shadow: 1px -1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
               padding: .625rem 15px;
               z-index: 999;
               //滚动条的设置
@@ -202,8 +193,8 @@
                 text-align: left;
                 .login-link{
                   text-align: left;
-                  display: flex;
-                  align-items: center;
+                  @include flex();
+                  @include flex-align-center();
                   &:hover{
                     color: $top-hover-font-color;
                     i{
@@ -235,9 +226,9 @@
         }
         .center {
           width: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flex();
+          @include flex-align-center();
+          @include flex-pack-center();
           .logo {
             max-width: 18.75rem;
             height: 60px;
@@ -248,15 +239,15 @@
         }
         .right {
           width: 25%;
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
+          @include flex();
+          @include flex-align-center();
+          @include flex-pack-end();
           .cc {
             height: 48px;
             width: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-end();
             @include ellipsis;
             text-align: center;
             &:hover {
@@ -286,10 +277,10 @@
         margin: 0 auto;
         height: 64px;
         width: 100%;
-        display: flex;
+        @include flex();
         flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
+        @include flex-align-center();
+        @include flex-pack-center();
         position: relative;
         &-item {
           position: relative;
@@ -297,8 +288,8 @@
           min-width: calc((100% - 60px)/10);
           min-width: -moz-calc((100% - 60px)/10);
           min-width: -webkit-calc((100% - 60px)/10);
-          display: flex;
-          align-items: center;
+          @include flex();
+          @include flex-align-center();
           &.hide{
             display: none;
           }
@@ -388,7 +379,7 @@
             height: 64px;
             line-height: 64px;
             width: 30px;
-            display: flex;
+            @include flex();
           }
           i {
             color: $menu-font-color;
@@ -397,23 +388,23 @@
         .page-down {
           display: none;
           a {
-            justify-content: flex-start;
+           @include flex-pack-start();
           }
         }
         .page-up{
           display: none;
           @include transform(rotate(-180deg));
           a {
-            justify-content: flex-end;
+            @include flex-pack-end();
           }
         }
       }
       .icons {
-        display: flex;
+        @include flex();
         height: 100%;
         .box{
-          display: flex;
-          align-items: center;
+          @include flex();
+          @include flex-align-center();
         }
         .icon {
           width: 22px;
@@ -422,9 +413,9 @@
           border-radius: 11px;
           margin-left: 1.125rem;
           text-align: center;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flex();
+          @include flex-align-center();
+          @include flex-pack-center();
           cursor: pointer;
           a{
             color: $iconfont-color;
@@ -443,8 +434,8 @@
         .search{
           width:30px;
           text-align: right;
-          display: flex;
-          justify-content: flex-end;
+          @include flex();
+          @include flex-pack-end();
           cursor: pointer;
           &:hover {
             >.icon-sousuo {
@@ -464,9 +455,9 @@
             width: 100%;
             display: none;
             >div {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
+              @include flex();
+              @include flex-pack-justify();
+              @include flex-align-center();
               width: 100%;
               height: 100%;
               .search-btn{

@@ -1,11 +1,6 @@
 @import './variable.scss';
+@import '../../../scss/mixin/index.scss';
 
-
-@mixin ellipsis() {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 @mixin transform($in) {
   transform: $in;
   -webkit-transform: $in;
@@ -41,9 +36,9 @@
         max-width: 1170px;
         margin: 0 auto;
         height: 64px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex();
+        @include flex-align-center();
+        @include flex-pack-justify();
         .logo {
           max-width: 12.5rem;
           height: 40px;
@@ -54,10 +49,10 @@
         .menu {
           flex:1;
           height: 100%;
-          display: flex;
+          @include flex();
           flex-wrap: nowrap;
-          align-items: center;
-          justify-content:flex-end;
+          @include flex-align-center();
+          @include flex-pack-end();
           padding: 0 15px;
           &-item {
             padding: 0 .5rem;
@@ -66,8 +61,8 @@
             min-width: calc((100%-20px)/8);
             min-width: -moz-calc((100%-20px)/8);
             min-width: -webkit-calc((100%-20px)/8);
-            display: flex;
-            align-items: center;
+            @include flex();
+            @include flex-align-center();
             &.hide{
               display: none;
             }
@@ -157,7 +152,7 @@
               height: 64px;
               line-height: 64px;
               width: 20px;
-              display: flex;
+              @include flex();
             }
             &:hover{
               i {
@@ -177,11 +172,11 @@
           }
         }
         .icons {
-          display: flex;
+          @include flex();
           height: 100%;
           .box{
-            display: flex;
-            align-items: center;
+            @include flex();
+            @include flex-align-center();
           }
           .icon {
             width: 22px;
@@ -190,9 +185,9 @@
             border-radius: 11px;
             margin-left: 1.125rem;
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             cursor: pointer;
             >a{
               color: $iconfont-color;
@@ -226,8 +221,8 @@
               margin-left: 0;
               background-color: $menu-bg;
               width: 8.75rem;
-              display: flex;
-              align-items: center;
+              @include flex();
+              @include flex-align-center();
               border: 1px  solid $icon-border-color;
               border-radius: 10px;
               padding-left: .5rem;
@@ -290,9 +285,7 @@
               background:$menu-bg;
               box-shadow: 1px 1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow-x: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
               overflow-y: scroll;
               //滚动条的设置
               &::-webkit-scrollbar {
@@ -355,9 +348,7 @@
               background:$menu-bg;
               box-shadow: 1px -1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
               padding: .625rem 15px;
               .line{
                 width: 100%;
@@ -370,8 +361,8 @@
                 text-align: left;
                 .login-link{
                   text-align: left;
-                  display: flex;
-                  align-items: center;
+                  @include flex();
+                  @include flex-align-center();
                   color:$menu-font-color;
                   &:hover{
                     color: $menu-font-hover-color;

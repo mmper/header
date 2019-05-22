@@ -1,11 +1,6 @@
 @import './variable.scss';
+@import '../../../scss/mixin/index.scss';
 
-
-@mixin ellipsis() {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 @mixin transform($in) {
   transform: $in;
   -webkit-transform: $in;
@@ -44,23 +39,23 @@
         margin: 0 auto;
         height: 48px;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex();
+        @include flex-pack-justify();
+        @include flex-align-center();
         a {
           color: $top-font-color;
         }
         .left {
-          display: flex;
-          align-items: center;
+          @include flex();
+          @include flex-align-center();
           .box{
             margin-right: 1.5rem;
           }
           .lang{
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             height: 48px;
             min-width: 3rem;
             .icon-xiala {
@@ -89,9 +84,7 @@
               background:$menu-bg;
               box-shadow: 1px 1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow-x: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
               overflow-y: scroll;
               z-index: 999;
               &::-webkit-scrollbar {
@@ -128,13 +121,13 @@
             position: relative;
             height: 48px;
             min-width: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             >a{
               font-size: 12px;
-              display: flex;
-              align-items: center;
+              @include flex();
+              @include flex-align-center();
               .sline {
                 height: 8px;
                 width: 1px;
@@ -176,9 +169,7 @@
               background:$menu-bg;
               box-shadow: 1px -1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
               padding: .625rem 15px;
               //滚动条的设置
               &::-webkit-scrollbar {
@@ -207,8 +198,8 @@
                 text-align: left;
                 .login-link{
                   text-align: left;
-                  display: flex;
-                  align-items: center;
+                  @include flex();
+                  @include flex-align-center();
                   &:hover{
                     color: $menu-font-hover-color;
                     i{
@@ -239,8 +230,8 @@
           }
         }
         .right {
-          display: flex;
-          align-items: center;
+          @include flex();
+          @include flex-align-center();
           font-size: 12px;
           line-height: 30px;
           .cc {
@@ -248,8 +239,8 @@
             max-width: 200px;
             @include ellipsis;
             a {
-              display: flex;
-              align-items: center;
+              @include flex();
+              @include flex-align-center();
               i {
                 padding-right: 3px;
                 font-size: 14px;
@@ -258,9 +249,7 @@
                 }
               }
               span {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                @include ellipsis;
               }
             }
             
@@ -298,16 +287,16 @@
         margin: 0 auto;
         height: 64px;
         width: 100%;
-        display: flex;
+        @include flex();
         flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-align-center();
+        @include flex-pack-justify();
         .nav {
-          flex: 1;
+          @include flex-1();
           >ul{
-            display: flex;
-            align-items: center;
-            justify-content:flex-end;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-end();
           }
         }
         &-item {
@@ -317,8 +306,8 @@
           min-width: calc((100% - 30px)/8);
           min-width: -moz-calc((100% - 30px)/8);
           min-width: -webkit-calc((100% - 30px)/8);
-          display: flex;
-          align-items: center;
+          @include flex();
+          @include flex-align-center();
           &.hide{
             display: none;
           }
@@ -422,11 +411,11 @@
         }
       }
       .icons {
-        display: flex;
+        @include flex();
         height: 100%;
         .box{
-          display: flex;
-          align-items: center;
+          @include flex();
+          @include flex-align-center();
         }
         .icon {
           width: 22px;
@@ -435,9 +424,9 @@
           border-radius: 11px;
           margin-left: 1.125rem;
           text-align: center;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flex();
+          @include flex-align-center();
+          @include flex-pack-center();
           cursor: pointer;
           a{
             color: $iconfont-color;
@@ -457,8 +446,8 @@
           position: relative;
           width: 48px;
           text-align: right;
-          display: flex;
-          justify-content: space-between;
+          @include flex();
+          @include flex-pack-justify();
           padding-left: 8px;
           &:hover{
             i {
@@ -479,8 +468,8 @@
             margin-left: 0;
             background-color: $menu-bg;
             width: 243px;
-            display: flex;
-            align-items: center;
+            @include flex();
+            @include flex-align-center();
             border-style: solid;
             border-color: $hearder-top-bg;
             border-right-width: 12px;

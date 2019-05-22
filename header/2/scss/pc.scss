@@ -1,11 +1,6 @@
 @import './variable.scss';
+@import '../../../scss/mixin/index.scss';
 
-
-@mixin ellipsis() {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 @mixin transform($in) {
   transform: $in;
   -webkit-transform: $in;
@@ -37,15 +32,15 @@
         max-width: 1170px;
         margin: 0 auto;
         height: 256px;
-        display: flex;
-        flex-direction: column;
+        @include flex();
+        @include flex-v();
         background: $hearder-top-bg;
         color: $top-font-color;
         .logo {
-          display: flex;
-          justify-content: center;
+          @include flex();
+          @include flex-pack-center();
           width: 100%;
-          align-items: center;
+          @include flex-align-center();
           height: 192px;
           border-bottom: 1px solid $nav-menu-top-line-color;
           .img{
@@ -59,9 +54,9 @@
           }
         }
         .icons {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+          @include flex();
+          @include flex-align-center();
+          @include flex-pack-justify();
           height: 64px;
           width: 100%;
           &__left, &__right {
@@ -71,9 +66,9 @@
               border: 1px  solid $icon-border-color;
               border-radius: 11px;
               text-align: center;
-              display: flex;
-              align-items: center;
-              justify-content: center;
+              @include flex();
+              @include flex-align-center();
+              @include flex-pack-center();
               cursor: pointer;
               >a{
                 color: $iconfont-color;
@@ -94,11 +89,11 @@
             }
           }
           &__left {
-            display: flex;
-            align-items: center;
+            @include flex();
+            @include flex-align-center();
             .box{
-              display: flex;
-              align-items: center;
+              @include flex();
+              @include flex-align-center();
               height: 64px;
               .icon-xiala {
                 color: $iconfont-color;
@@ -152,7 +147,7 @@
                 border-radius: .25rem;
                 white-space: nowrap;
                 overflow: hidden;
-                text-overflow: ellipsis;
+                @include ellipsis;
                 padding: .625rem 15px;
                 .line{
                   width: 100%;
@@ -165,8 +160,8 @@
                   text-align: left;
                   .login-link{
                     text-align: left;
-                    display: flex;
-                    align-items: center;
+                    @include flex();
+                    @include flex-align-center();
                     color: $top-font-color;
                     &:hover{
                       color: $top-hover-font-color;
@@ -198,11 +193,11 @@
             }
           }
           &__right {
-            display: flex;
-            align-items: center;
+            @include flex();
+            @include flex-align-center();
             .box{
-              display: flex;
-              align-items: center;
+              @include flex();
+              @include flex-align-center();
               height: 64px;
             }
             .search{
@@ -225,8 +220,8 @@
                 margin-left: 0;
                 background-color: $hearder-top-bg;
                 width: 12.625rem;
-                display: flex;
-                align-items: center;
+                @include flex();
+                @include flex-align-center();
                 border-bottom: 1px  solid $icon-border-color;
                 display: none;
                 .input{
@@ -268,7 +263,7 @@
             .lang.box{
               position: relative;
               margin-left: 5rem;
-              display: flex;
+              @include flex();
               &:hover{
                 .lang__downlist{
                   display: block;
@@ -278,7 +273,7 @@
                 } 
               }
               .lang {
-                display: flex;
+                @include flex();
                 color: $iconfont-color;
                 >a {
                   color: $iconfont-color;
@@ -304,7 +299,7 @@
                 border-radius: .25rem;
                 white-space: nowrap;
                 overflow-x: hidden;
-                text-overflow: ellipsis;
+                @include ellipsis;
                 overflow-y: scroll;
                 &::-webkit-scrollbar {
                   width:5px;
@@ -354,10 +349,10 @@
       max-width: 1170px;
       margin: 0 auto;
       height: 64px;
-      display: flex;
+      @include flex();
       flex-wrap: nowrap;
-      align-items: center;
-      justify-content:center;
+      @include flex-align-center();
+      @include flex-pack-center();
       width: 100%;
       box-shadow: 0px .3125rem 0 -.3125rem $shadow-color;
       &-item {
@@ -368,8 +363,8 @@
         min-width: -moz-calc((100% - 14px - 1rem)/10);
         min-width: -webkit-calc((100% - 14px - 1rem)/10);
         max-width: 10%;
-        display: flex;
-        align-items: center;
+        @include flex();
+        @include flex-align-center();
         &.hide{
           display: none;
         }
@@ -468,7 +463,7 @@
           height: 64px;
           line-height: 64px;
           width: 30px;
-          display: flex;
+          @include flex();
         }
         i {
           color: $menu-font-color;

@@ -1,11 +1,6 @@
 @import './variable.scss';
+@import '../../../scss/mixin/index.scss';
 
-
-@mixin ellipsis() {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 @mixin transform($in) {
   transform: $in;
   -webkit-transform: $in;
@@ -45,21 +40,21 @@
         margin: 0 auto;
         height: 128px;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex();
+        @include flex-pack-justify();
+        @include flex-align-center();
         .left {
-          flex: 1;
-          display: flex;
-          align-items: center;
+          @include flex-1();
+          @include flex();
+          @include flex-align-center();
           .box{
             margin-right: 1.5rem;
           }
           .lang{
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             height: 48px;
             min-width: 3rem;
             
@@ -86,9 +81,7 @@
               background: $hearder-top-bg;
               box-shadow: 1px 1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow-x: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
               overflow-y: scroll;
               &::-webkit-scrollbar {
                 width:5px;
@@ -123,13 +116,13 @@
             position: relative;
             height: 48px;
             min-width: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             >a{
               font-size: 12px;
-              display: flex;
-              align-items: center;
+              @include flex();
+              @include flex-align-center();
               .sline {
                 height: 8px;
                 width: 1px;
@@ -171,9 +164,7 @@
               background: $hearder-top-bg;
               box-shadow: 1px -1px .9375rem 0 $shadow-color;
               border-radius: .25rem;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
+              @include ellipsis;
               padding: .625rem 15px;
               //滚动条的设置
               &::-webkit-scrollbar {
@@ -202,8 +193,8 @@
                 text-align: left;
                 .login-link{
                   text-align: left;
-                  display: flex;
-                  align-items: center;
+                  @include flex();
+                  @include flex-align-center();
                   &:hover{
                     color: $top-hover-font-color;
                     i{
@@ -235,9 +226,9 @@
         }
         .center {
           max-width: 18.75rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flex();
+          @include flex-align-center();
+          @include flex-pack-center();
           .logo {
             max-width: 18.75rem;
             height: 60px;
@@ -247,36 +238,36 @@
           }
         }
         .right {
-          flex: 1;
+          @include flex-1();
           font-size: 12px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
+          @include flex();
+          @include flex-v();
+          @include flex-align-end();
           .icons {
-            display: flex;
+            @include flex();
             width: 260px;
             height: 30px;
             .box{
               width: 100%;
               height: 100%;
-              display: flex;
-              align-items: center;
+              @include flex();
+              @include flex-align-center();
             }
             .search{
               position: relative;
               width: 260px;
               text-align: right;
-              display: flex;
-              justify-content: flex-end;
+              @include flex();
+              @include flex-pack-end();
               .search-btn{
                 cursor: pointer;
                 border: 0;
                 display:block;
                 width: 30px;
                 height: 30px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flex();
+                @include flex-align-center();
+                @include flex-pack-center();
                 background-color: $menu-bg;
                 color: $menu-font-color;
                 &:hover {
@@ -324,18 +315,18 @@
       .menu {
         max-width: 1170px;
         margin: 0 auto;
-        display: flex;
+        @include flex();
         flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
+        @include flex-align-center();
+        @include flex-pack-center();
         &-item {
           position: relative;
           min-width: 9.5%;
           min-width: calc((100% - 30px)/10);
           min-width: -moz-calc((100% - 30px)/10);
           min-width: -webkit-calc((100% - 30px)/10);
-          display: flex;
-          align-items: center;
+          @include flex();
+          @include flex-align-center();
           &.hide{
             display: none;
           }
@@ -418,7 +409,7 @@
             height: 64px;
             line-height: 64px;
             width: 30px;
-            display: flex;
+            @include flex();
           }
           &:hover{
             i {
@@ -432,14 +423,14 @@
         .page-down {
           display: none;
           a {
-            justify-content: flex-start;
+           @include flex-pack-start();
           }
         }
         .page-up{
           display: none;
           @include transform(rotate(-180deg));
           a {
-            justify-content: flex-end;
+            @include flex-pack-end();
           }
         }
       }
