@@ -496,7 +496,7 @@
                 background-color: $separator-line-color;
               }
               .input{
-                flex:1;
+                @include flex-1();
                 background:transparent;
                 outline: none;
                 border: none;

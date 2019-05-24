@@ -286,7 +286,7 @@
         @include flex-pack-justify();
         position: relative;
         .nav {
-          flex:1;
+          @include flex-1();
           >ul{
             @include flex();
             @include flex-align-center();
@@ -503,7 +503,7 @@
                 background-color: $separator-line-color;
               }
               .input{
-                flex:1;
+                @include flex-1();
                 background:transparent;
                 outline: none;
                 border: none;
