@@ -43,6 +43,7 @@
   -moz-justify-content: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -ms-flex-pack: center;
 }
 // flex-pack-justify：子元素两端对齐
 @mixin flex-pack-justify() {
@@ -51,6 +52,7 @@
   -webkit-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
+  box-pack: justify;
 }
 // flex-pack-justify：子元素左对齐
 @mixin flex-pack-start() {
