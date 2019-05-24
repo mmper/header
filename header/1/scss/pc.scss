@@ -266,6 +266,9 @@
           }
           .lang{
             position: relative;
+            @include flex();
+            @include flex-align-center();
+            @include flex-pack-center();
             &:hover{
               .lang__downlist{
                 display: block;
