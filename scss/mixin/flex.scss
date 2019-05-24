@@ -65,6 +65,7 @@
 // flex-pack-justify：子元素右对齐
 @mixin flex-pack-end() {
   -webkit-box-pack: end;
+  -webkit-box-pack: flex-end;
   -moz-justify-content: flex-end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
