@@ -243,6 +243,8 @@
         width: 253px;
         background: $logo-bg;
         @include flex();
+        @include flex-align-center();
+        @include flex-pack-center();
         a {
           @include flex();
           @include flex-align-center();
