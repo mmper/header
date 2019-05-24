@@ -200,6 +200,7 @@
                   text-align: left;
                   @include flex();
                   @include flex-align-center();
+                  color:$menu-font-color;
                   &:hover{
                     color: $menu-font-hover-color;
                     i{
@@ -223,6 +224,7 @@
                     display: block;
                     text-align: center;
                     line-height: 22px;
+                    color: $iconfont-color;
                   }
                 }
               }     

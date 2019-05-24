@@ -57,7 +57,7 @@
             @include flex-pack-center();
             height: 48px;
             min-width: 3rem;
-            
+
             &:hover{
               .lang__downlist{
                 display: block;
@@ -182,6 +182,7 @@
                   text-align: left;
                   @include flex();
                   @include flex-align-center();
+                  color:$top-font-color;
                   &:hover{
                     color: $top-hover-font-color;
                     i{
@@ -205,6 +206,7 @@
                     display: block;
                     text-align: center;
                     line-height: 22px;
+                    color: $iconfont-color;
                   }
                 }
               }     

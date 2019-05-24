@@ -193,6 +193,7 @@
                   text-align: left;
                   @include flex();
                   @include flex-align-center();
+                  color: $top-font-color;
                   &:hover{
                     color: $top-hover-font-color;
                     i{
@@ -216,6 +217,7 @@
                     display: block;
                     text-align: center;
                     line-height: 22px;
+                    color: $iconfont-color;
                   }
                 }
               }     

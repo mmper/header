@@ -208,9 +208,9 @@
                     }
                   }
                   &.readonly{
-                    color: $iconfont-color;
+                    color: $menu-font-color;
                     &:hover{
-                      color: $iconfont-color;
+                      color: $menu-font-color;
                       i{
                         border-color: $icon-border-color;
                       }
@@ -225,6 +225,7 @@
                     display: block;
                     text-align: center;
                     line-height: 22px;
+                    color: $iconfont-color;
                   }
                 }
               }     
