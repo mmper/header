@@ -166,5 +166,17 @@ $(function () {
 	$('.pc .lang__downlist').on('mousewheel',function(e){
 		e.stopPropagation() //阻止事件向上冒泡
 	});
+	// $('.pc .menu').on('touchstart',function(e){
+	// 	e.stopPropagation() //阻止事件向上冒泡
+	// });
+	$('.pc .menu>.menu-item').on('touchmove', function (e) {
+		$('.pc .menu>.menu-item a').css({'color': '#0f0'});
+		console.log("用户手指在屏幕上移动...");
+	});
+	//手指离开屏幕时触发
+	$('.pc .menu>.menu-item').on('touchend', function () {
+		$(this).css({'color': '#00f'});
+			console.log("用户手离开屏幕...");
+	})
 })
 
