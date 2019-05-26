@@ -56,7 +56,7 @@
             // justify-content: center;
             @include flex();
             @include flex-align-center();
-            @include flex-pack-end();
+            @include flex-pack-center();
             height: 48px;
             min-width: 3rem;
             

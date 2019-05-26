@@ -128,11 +128,11 @@
                   box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
                   border-top: 1px solid $menu-font-hover-color;
                   z-index: 999;
-                  li:hover{
-                    a {
-                      color: $menu-font-hover-color;
-                    }
-                  }
+                  // &_item:hover{
+                  //   a {
+                      
+                  //   }
+                  // }
                   a{
                     line-height: 50px;
                     height: 50px;
@@ -140,6 +140,9 @@
                     width: 100%;
                     display: block;
                     @include ellipsis;
+                    &:hover{
+                      color: $menu-font-hover-color;
+                    }
                   }
                 }
               }

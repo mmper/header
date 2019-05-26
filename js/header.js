@@ -10,13 +10,7 @@ $(function () {
 		judgeMain();
 		containerMargin();
 	})
-	// window.onresize= function(){
-	// 	adjustNavSizePc();
-	// 	judgeMain();
-	// 	containerMargin();
-	// }
 	function adjustNavSizePc() {
-		// let navSize = $(".pc .hearder__container").outerWidth();
 		var designWidth =  window.innerWidth ? window.innerWidth : document.body.clientWidth;
 		if (designWidth > 768) {
 			var menu_itemlength = $(".pc .menu .menu-item").length;
@@ -169,8 +163,8 @@ $(function () {
 			}
 		}
 	})
+	$('.pc .lang__downlist').on('mousewheel',function(e){
+		e.stopPropagation() //阻止事件向上冒泡
+	});
 })
 
-$('.pc .lang__downlist').on('mousewheel',function(e){
-	e.stopPropagation() //阻止事件向上冒泡
-});

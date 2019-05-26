@@ -25,10 +25,10 @@ $(function () {
 		$('.m_nav').removeClass('open');
 		$('.mobile ').removeClass('open');
 		$('.mobile-main').removeClass('open');
-		$(".mobile .menu > li > a").removeClass('current');
-		$(".mobile .submenu > li > a").removeClass("sub-current");
+		$(".mobile .menu > .menu-item > a").removeClass('current');
+		$(".mobile .submenu > .e_li > a").removeClass("sub-current");
 		$(".mobile .submenu").css("display",'none');
-		$(".mobile .submenu > li > .thr").css("display",'none');
+		$(".mobile .submenu > .e_li > .thr").css("display",'none');
 	}
 	/** mobile 切换语言lang */
 	$('.mobile .lang').on('click', function (e) {
@@ -56,19 +56,19 @@ $(function () {
 		e.preventDefault()
 	})
 	/** mobile nav一级菜单 */
-	$(".mobile .menu > li > a").on('click', function () {
+	$(".mobile .menu > .menu-item > a").on('click', function () {
 		$(this).addClass("current").parents().siblings().find("a").removeClass("current");
-		$(".mobile .submenu > li > a").removeClass("sub-current");
-		$(".mobile .submenu > li > .thr").css("display",'none');
+		$(".mobile .submenu > .e_li > a").removeClass("sub-current");
+		$(".mobile .submenu > .e_li > .thr").css("display",'none');
 		if ($(this).siblings().length > 0 && $(this).siblings(".submenu").css('display') !== 'none') {
 			$(this).removeClass("current")
-			$(".mobile .submenu > li > a").removeClass("sub-current")
+			$(".mobile .submenu > .e_li > a").removeClass("sub-current")
 		}
 		$(this).parents().siblings().find(".submenu").hide(300);
 		$(this).siblings(".submenu").slideToggle(300);
 	})
 	/** mobile nav二级菜单 */
-	$(".mobile .submenu > li > a").on('click', function () {
+	$(".mobile .submenu > .e_li > a").on('click', function () {
 		$(this).addClass("sub-current").parents().siblings().find("a").removeClass("sub-current");
 		if ($(this).siblings().length > 0 && $(this).siblings(".thr").css('display') !== 'none') {
 			$(this).removeClass("sub-current")
@@ -77,7 +77,7 @@ $(function () {
 		$(this).siblings(".thr").slideToggle(300);
 	})
 	/** mobile nav三级菜单 */
-	$(".mobile .thr > li > a").on('click', function () {
+	$(".mobile .thr > div > a").on('click', function () {
 		$(this).addClass("xuan").parents().siblings().find("a").removeClass("xuan");
 	})
 	/** mobile 头部search */
