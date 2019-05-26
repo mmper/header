@@ -441,9 +441,7 @@
                 @include ellipsis;
                 color: $menu-font-color;
                 &:hover{
-                  a {
-                    color: $menu-font-hover-color;
-                  }
+                  color: $menu-font-hover-color;
                 }
               }
             }
