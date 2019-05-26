@@ -295,7 +295,7 @@
         @include flex-pack-justify();
         .nav {
           @include flex-1();
-          >ul{
+          >.nav-menu{
             @include flex();
             @include flex-align-center();
             @include flex-pack-end();

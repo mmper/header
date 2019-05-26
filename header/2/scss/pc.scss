@@ -432,11 +432,6 @@
               border-radius:0 0 .25rem .25rem;
               box-shadow:0 1.25rem 2.5rem .625rem $shadow-color;
               border-top: 1px solid $menu-font-hover-color;
-              li:hover{
-                a {
-                  color: $menu-font-hover-color;
-                }
-              }
               a{
                 line-height: 50px;
                 height: 50px;
@@ -445,6 +440,11 @@
                 display: block;
                 @include ellipsis;
                 color: $menu-font-color;
+                &:hover{
+                  a {
+                    color: $menu-font-hover-color;
+                  }
+                }
               }
             }
           }
