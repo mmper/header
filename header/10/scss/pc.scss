@@ -157,7 +157,7 @@
               border-width: 6px;
               border-color: $hearder-top-bg $hearder-top-bg transparent transparent;
               @include transform(rotate(-45deg));
-              box-shadow: 1px -10px 1.4rem $shadow-color;
+              box-shadow:5px -5px 10px -4px $shadow-color;
               z-index: 1000;
             }
             .login__downlist{
