@@ -382,6 +382,7 @@
             line-height: 64px;
             width: 30px;
             @include flex();
+            @include flex-pack-center();
           }
           i {
             color: $menu-font-color;
@@ -389,16 +390,16 @@
         }
         .page-down {
           display: none;
-          a {
-           @include flex-pack-start();
-          }
+          // a {
+          //  @include flex-pack-start();
+          // }
         }
         .page-up{
           display: none;
           @include transform(rotate(-180deg));
-          a {
-            @include flex-pack-end();
-          }
+          // a {
+          //   @include flex-pack-end();
+          // }
         }
       }
       .icons {

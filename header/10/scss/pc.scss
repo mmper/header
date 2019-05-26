@@ -391,6 +391,7 @@
             width: 30px;
             // display: flex;
             @include flex();
+            @include flex-pack-center();
           }
           &:hover{
             i {

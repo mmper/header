@@ -466,6 +466,7 @@
           line-height: 64px;
           width: 30px;
           @include flex();
+          @include flex-pack-center();
         }
         i {
           color: $menu-font-color;
