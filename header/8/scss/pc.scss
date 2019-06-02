@@ -419,7 +419,7 @@
           @include flex-pack-justify();
           padding-left: 8px;
           &:hover{
-            >i{
+            .icon-sousuo{
               color:$menu-font-hover-color;
             }
           }
