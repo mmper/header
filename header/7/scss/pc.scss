@@ -156,7 +156,8 @@
               border-width: 6px;
               border-color: $menu-bg $menu-bg transparent transparent;
               @include transform(rotate(-45deg));
-              box-shadow:5px -5px 10px -4px $shadow-color;
+              // box-shadow:5px -5px 10px -4px $shadow-color;
+              box-shadow: 5px -5px 10px -1px $shadow-color;
               z-index: 1000;
             }
             .login__downlist{
@@ -484,7 +485,7 @@
                 }
                 &:hover{
                   i {
-                    color: $top-hover-font-color;
+                    color: $menu-font-hover-color;
                   }
                 }
                 i {

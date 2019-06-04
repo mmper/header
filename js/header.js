@@ -10,6 +10,21 @@ $(function () {
 		judgeMain();
 		containerMargin();
 	})
+	var timer,timeout=1000;
+	$(document).scroll(function(){
+		console.log(4455, $('body'))
+			if(!timer){
+					$('body').addClass('pointer-none');
+			}else{
+					clearTimeout(timer);
+					timer=null;
+			}
+			timer=setTimeout(function(){
+					$('body').removeClass('pointer-none');
+					// next();
+					timer=null;
+			}, timeout);
+	})
 	function adjustNavSizePc() {
 		var designWidth =  window.innerWidth ? window.innerWidth : document.body.clientWidth;
 		if (designWidth > 768) {

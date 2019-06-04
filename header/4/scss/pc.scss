@@ -156,7 +156,8 @@
               border-width: 6px;
               border-color: $menu-bg $menu-bg transparent transparent;
               @include transform(rotate(-45deg));
-              box-shadow:5px -5px 10px -4px $shadow-color;
+              // box-shadow:5px -5px 10px -4px $shadow-color;
+              box-shadow: 5px -5px 10px -1px $shadow-color;
               z-index: 1000;
             }
             .login__downlist{
@@ -461,11 +462,17 @@
             width: 1px;
             background: $separator-line-color;
           }
+          .iconfont-div{
+            display: flex;
+            flex: 1;
+            @include flex-align-center();
+            @include flex-pack-end();
+          }
           .search_input {
             position: absolute;
             z-index: 999;
             bottom: -52px;
-            right: -7px;
+            right: 0;
             height: 52px;
             margin-left: 0;
             background-color: $menu-bg;

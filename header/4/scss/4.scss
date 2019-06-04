@@ -12,6 +12,9 @@ body {
   -webkit-overflow-scrolling: touch;
   margin: 0;
   padding: 0;
+  &.pointer-none{
+    pointer-events: none;
+  }
 }
 /* 自定义字体*/
 // @font-face {
