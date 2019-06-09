@@ -181,5 +181,41 @@ $(function () {
 	$('.pc .lang__downlist').on('mousewheel',function(e){
 		e.stopPropagation() //阻止事件向上冒泡
 	});
+
+	document.body.addEventListener('touchstart', function(){ });
+
+		// /** pc nav一级菜单 */
+		// $(".pc .menu > .menu-item > a").on('click', function (e) {
+		// 	$(this).addClass("current").parents().siblings().find("a").removeClass("current");
+		// 	$(".pc .submenu > .e_li > a").removeClass("sub-current");
+		// 	$(".pc .submenu > .e_li > .thr").css("display",'none');
+		// 	if ($(this).siblings().length > 0 && $(this).siblings(".submenu").css('display') !== 'none') {
+		// 		$(this).removeClass("current")
+		// 		$(".pc .submenu > .e_li > a").removeClass("sub-current")
+		// 	}
+		// 	$(this).parents().siblings().find(".submenu").hide(300);
+		// 	$(this).siblings(".submenu").slideToggle(300);
+
+		// 	$(document).one('click',
+		// 	function() {
+		// 		$(".pc .submenu > .e_li > a").removeClass("sub-current");
+		// 		$(".pc .submenu > .e_li > .thr").css("display",'none');
+		// 		$(this).parents().siblings().find(".submenu").hide(300);
+		// 	});
+		// 	e.stopPropagation()
+		// })
+		// /** pc nav二级菜单 */
+		// $(".pc .submenu > .e_li > a").on('click', function () {
+		// 	$(this).addClass("sub-current").parents().siblings().find("a").removeClass("sub-current");
+		// 	if ($(this).siblings().length > 0 && $(this).siblings(".thr").css('display') !== 'none') {
+		// 		$(this).removeClass("sub-current")
+		// 	}
+		// 	$(this).parents().siblings().find(".thr").hide(300);
+		// 	$(this).siblings(".thr").slideToggle(300);
+		// })
+		// /** pc nav三级菜单 */
+		// $(".pc .thr > div > a").on('click', function () {
+		// 	$(this).addClass("xuan").parents().siblings().find("a").removeClass("xuan");
+		// })
 })
 
