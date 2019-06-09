@@ -283,7 +283,7 @@
       font-size: calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -moz-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
       font-size: -webkit-calc(1.4rem + (2 - 1.4) * ((100vw - 768px)/ (1200 - 800)));
-      box-shadow: 0px .3125rem .625rem $shadow-color;
+      box-shadow: 0px .3125rem .2rem $shadow-color;
       &.search-open{
         background-color: $hearder-top-bg;
       }
